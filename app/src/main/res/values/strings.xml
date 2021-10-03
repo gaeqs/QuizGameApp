@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="card_image">Card image</string>
+    <string name="confirm">Confirm</string>
+    <string name="game_over">Game Over!</string>
+    <string name="score">Score: %1$d</string>
+    <string name="quiz_game">Quiz Game</string>
+    <string name="play">Play</string>
+    <string name="play_again">Play Again</string>
+    <string name="main_menu">Main menu</string>
+</resources>
