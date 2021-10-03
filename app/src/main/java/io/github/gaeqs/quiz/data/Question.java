@@ -9,12 +9,12 @@ import java.util.List;
 public class Question {
 
     private final String title;
-    private final String qImage;
+    private final String image;
     private final List<Answer> answers;
 
-    public Question(String title, String qImage, List<Answer> answers) {
+    public Question(String title, String image, List<Answer> answers) {
         this.title = title;
-        this.qImage = qImage;
+        this.image = image;
         this.answers = Collections.unmodifiableList(new ArrayList<>(answers));
     }
 
@@ -23,7 +23,7 @@ public class Question {
     }
 
     public String getImage(){
-        return qImage;
+        return image;
     }
 
     public List<Answer> getAnswers() {

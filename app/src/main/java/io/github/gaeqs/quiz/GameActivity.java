@@ -1,14 +1,12 @@
 package io.github.gaeqs.quiz;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -27,8 +25,8 @@ public class GameActivity extends AppCompatActivity {
     private TextView score;
     private Button confirmButton;
     private QuizAdapter adapter;
-    private BiConsumer<QuizGame, QuizGameStatus> changeListener = this::onGameStatusChange;
 
+    private final BiConsumer<QuizGame, QuizGameStatus> changeListener = this::onGameStatusChange;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,12 +87,12 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
-    private void setQuestionImage(){
+    private void setQuestionImage() {
         String imgRes = QuizGame.GAME.getCurrentQuestion().getImage();
-        if(imgRes != null){
+        if (imgRes != null) {
             qImage.setImageResource(getResources().getIdentifier(imgRes, "drawable", getPackageName()));
 
-        }else{
+        } else {
             qImage.setImageResource(0);
         }
     }
@@ -109,7 +107,6 @@ public class GameActivity extends AppCompatActivity {
         super.onPause();
         QuizGame.GAME.removeChangeListener(changeListener);
     }
-
 
 
 }

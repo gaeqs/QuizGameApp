@@ -9,10 +9,10 @@
 
     <TextView
         android:id="@+id/quiz_title"
-        android:layout_width="298dp"
+        android:layout_width="0dp"
         android:layout_height="33dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:text="Large Text"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -43,16 +43,17 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/quiz_recycle_view"
         style="@style/Theme.Quiz"
-        android:layout_width="416dp"
-        android:layout_height="364dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="16dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/quiz_confirm_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qImage"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.378" />
 
     <TextView
         android:id="@+id/quiz_score"

@@ -9,20 +9,19 @@
 
     <TextView
         android:id="@+id/quiz_title"
-        android:layout_width="395dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginEnd="25dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:text="Large Text"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/qImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <Button
         android:id="@+id/quiz_confirm_button"
@@ -44,12 +43,14 @@
         style="@style/Theme.Quiz"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/quiz_confirm_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qImage" />
+        app:layout_constraintTop_toBottomOf="@+id/qImage"
+        app:layout_constraintVertical_bias="0.31" />
 
     <TextView
         android:id="@+id/quiz_score"
@@ -71,13 +72,11 @@
         android:id="@+id/qImage"
         android:layout_width="219dp"
         android:layout_height="112dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/quiz_recycle_view"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.417"
         app:layout_constraintStart_toEndOf="@+id/quiz_title"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002"
         app:srcCompat="@drawable/cow" />
 </androidx.constraintlayout.widget.ConstraintLayout>
