@@ -1,6 +1,7 @@
 [
   {
     "title": "This is a test question!",
+    "qImage" : null,
     "answers": [
       {
         "name": "A 1",
@@ -41,6 +42,7 @@
   },
   {
     "title": "This is another test question!",
+    "qImage" : null,
     "answers": [
       {
         "name": "A 2",
@@ -54,6 +56,28 @@
       },
       {
         "name": "C 2",
+        "image": null,
+        "correct": false
+      }
+    ]
+  },
+
+  {
+    "title": "This is a picture question!",
+    "qImage" : "cow",
+    "answers": [
+      {
+        "name": "A 3",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "B 3",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "C 3",
         "image": null,
         "correct": false
       }
