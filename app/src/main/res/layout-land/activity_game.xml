@@ -29,13 +29,13 @@
         android:layout_height="wrap_content"
         android:text="@string/confirm"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95"
+        app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.5" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -49,7 +49,7 @@
         app:layout_constraintBottom_toTopOf="@+id/quiz_confirm_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qImage"
+        app:layout_constraintTop_toBottomOf="@+id/question_image"
         app:layout_constraintVertical_bias="0.31" />
 
     <TextView
@@ -65,11 +65,11 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/qImage"
+        app:layout_constraintStart_toEndOf="@+id/question_image"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/qImage"
+        android:id="@+id/question_image"
         android:layout_width="219dp"
         android:layout_height="112dp"
         app:layout_constraintBottom_toBottomOf="parent"

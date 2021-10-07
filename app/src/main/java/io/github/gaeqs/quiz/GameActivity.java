@@ -34,7 +34,7 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         title = findViewById(R.id.quiz_title);
-        qImage = findViewById(R.id.qImage);
+        qImage = findViewById(R.id.question_image);
         score = findViewById(R.id.quiz_score);
         confirmButton = findViewById(R.id.quiz_confirm_button);
         RecyclerView recyclerView = findViewById(R.id.quiz_recycle_view);

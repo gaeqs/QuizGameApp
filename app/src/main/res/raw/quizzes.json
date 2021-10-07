@@ -64,7 +64,7 @@
 
   {
     "title": "This is a picture question!",
-    "qImage" : "cow",
+    "image" : "cow",
     "answers": [
       {
         "name": "A 3",

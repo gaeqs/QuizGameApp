@@ -25,7 +25,7 @@ public class QuizGame {
             e.printStackTrace();
             return;
         }
-        GAME = new QuizGame(questions, 3);
+        GAME = new QuizGame(questions, 5);
     }
 
     private final List<Question> questions;
