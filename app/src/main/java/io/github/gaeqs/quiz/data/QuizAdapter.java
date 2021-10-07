@@ -111,7 +111,7 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.QuizViewHolder
             image = view.findViewById(R.id.answer_image);
             text = view.findViewById(R.id.answer_text);
             card.setOnClickListener(it -> {
-                game.answer(correct);
+                game.answer(getAdapterPosition());
             });
             if (game.getStatus() == QuizGameStatus.ANSWERED) {
                 showCorrectAnswers();
@@ -131,10 +131,22 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.QuizViewHolder
          * Turns green the card if this answer is correct.
          */
         public void showCorrectAnswer() {
+            boolean selected = getAdapterPosition() == game.getSelectedAnswer();
+            int color;
             if (correct) {
-                card.setCardBackgroundColor(context.getResources()
-                        .getColor(R.color.correct_answer, context.getTheme()));
+                if (selected) {
+                    color = R.color.selected_correct_answer;
+                } else {
+                    color = R.color.correct_answer;
+                }
+            } else {
+                if (selected) {
+                    color = R.color.selected_wrong_answer;
+                } else {
+                    return;
+                }
             }
+            card.setCardBackgroundColor(context.getResources().getColor(color, context.getTheme()));
         }
     }
 
