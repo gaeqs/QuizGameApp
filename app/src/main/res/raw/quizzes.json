@@ -1,61 +1,25 @@
 [
   {
-    "title": "This is a test question!",
-    "image" : null,
-    "answers": [
-      {
-        "name": "A 1",
-        "image": null,
-        "correct": true
-      },
-      {
-        "name": "B 1",
-        "image": null,
-        "correct": false
-      },
-      {
-        "name": "C 1",
-        "image": null,
-        "correct": true
-      },
-      {
-        "name": "D 1",
-        "image": "cow",
-        "correct": false
-      },
-      {
-        "name": "D 1",
-        "image": "cow",
-        "correct": false
-      },
-      {
-        "name": "D 1",
-        "image": "cow",
-        "correct": false
-      },
-      {
-        "name": "D 1",
-        "image": "cow",
-        "correct": false
-      }
-    ]
-  },
-  {
-    "title": "This is another test question!",
+    "title": "¿Cómo se conoce a la versión 5.0 de Android?",
     "qImage" : null,
     "answers": [
       {
-        "name": "A 2",
-        "image": null,
-        "correct": true
-      },
-      {
-        "name": "B 2",
+        "name": "KitKat",
         "image": null,
         "correct": false
       },
       {
-        "name": "C 2",
+        "name": "Marshmallow",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Lollipop",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Nougat",
         "image": null,
         "correct": false
       }
@@ -63,24 +27,123 @@
   },
 
   {
-    "title": "This is a picture question!",
-    "image" : "cow",
+    "title": "¿Cuál fue el dispositivo android más vendido de la historia?",
+    "qImage" : null,
     "answers": [
       {
-        "name": "A 3",
+        "name": "Samsung Galaxy Note 2",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Samsung Galaxy S4",
         "image": null,
         "correct": true
       },
       {
-        "name": "B 3",
+        "name": "Huawei Mate 10",
         "image": null,
         "correct": false
       },
       {
-        "name": "C 3",
+        "name": "Redmi Note 8",
         "image": null,
         "correct": false
       }
     ]
-  }
+  },
+
+  {
+    "title": "¿Cuál de los siguientes productos no ha implementado android?",
+    "qImage" : null,
+    "answers": [
+      {
+        "name": "Espejo",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Coche",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Guitarra Eléctrica",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Gafas",
+        "image": null,
+        "correct": false
+      }
+    ]
+  },
+
+  {"title": "¿Cómo se llamaba anteriormente la Google Play Store?",
+    "qImage" : null,
+    "answers": [
+      {
+        "name": "Android Market",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Android App Store",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Android Marketplace",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Android App Hub",
+        "image": null,
+        "correct": false
+      }
+    ]},
+
+  {"title": "El primer móvil android comercial fue un Samsung:",
+    "qImage" : null,
+    "answers": [
+      {
+        "name" : "Verdadero",
+        "image" : null,
+        "correct" : false
+      },
+      {
+        "name" : "Falso",
+        "image" : null,
+        "correct" : true
+      }
+    ]},
+
+  {"title": "¿Cuál es el logo de la versión 8.0",
+    "qImage" : null,
+    "answers": [
+      {
+        "name" : null,
+        "image" : "honeycomb",
+        "correct" : false
+      },
+      {
+        "name" : null,
+        "image" : "kitkat",
+        "correct" : false
+      },
+      {
+        "name" : null,
+        "image" : "marshmallow",
+        "correct" : false
+      },
+      {
+        "name" : null,
+        "image" : "oreo",
+        "correct" : true
+      }
+    ]}
+
+
 ]
