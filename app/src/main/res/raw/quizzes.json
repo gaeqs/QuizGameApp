@@ -1,7 +1,8 @@
 [
   {
     "title": "¿Cómo se conoce a la versión 5.0 de Android?",
-    "qImage" : null,
+    "qImage": null,
+    "imageQuestion": false,
     "answers": [
       {
         "name": "KitKat",
@@ -25,10 +26,10 @@
       }
     ]
   },
-
   {
     "title": "¿Cuál fue el dispositivo android más vendido de la historia?",
-    "qImage" : null,
+    "qImage": null,
+    "imageQuestion": false,
     "answers": [
       {
         "name": "Samsung Galaxy Note 2",
@@ -52,10 +53,10 @@
       }
     ]
   },
-
   {
     "title": "¿Cuál de los siguientes productos no ha implementado android?",
-    "qImage" : null,
+    "qImage": null,
+    "imageQuestion": false,
     "answers": [
       {
         "name": "Espejo",
@@ -79,9 +80,10 @@
       }
     ]
   },
-
-  {"title": "¿Cómo se llamaba anteriormente la Google Play Store?",
-    "qImage" : null,
+  {
+    "title": "¿Cómo se llamaba anteriormente la Google Play Store?",
+    "qImage": null,
+    "imageQuestion": false,
     "answers": [
       {
         "name": "Android Market",
@@ -103,47 +105,50 @@
         "image": null,
         "correct": false
       }
-    ]},
-
-  {"title": "El primer móvil android comercial fue un Samsung:",
-    "qImage" : null,
+    ]
+  },
+  {
+    "title": "El primer móvil android comercial fue un Samsung:",
+    "qImage": null,
+    "imageQuestion": false,
     "answers": [
       {
-        "name" : "Verdadero",
-        "image" : null,
-        "correct" : false
+        "name": "Verdadero",
+        "image": null,
+        "correct": false
       },
       {
-        "name" : "Falso",
-        "image" : null,
-        "correct" : true
+        "name": "Falso",
+        "image": null,
+        "correct": true
       }
-    ]},
-
-  {"title": "¿Cuál es el logo de la versión 8.0",
-    "qImage" : null,
+    ]
+  },
+  {
+    "title": "¿Cuál es el logo de la versión 8.0",
+    "qImage": null,
+    "imageQuestion": true,
     "answers": [
       {
-        "name" : null,
-        "image" : "honeycomb",
-        "correct" : false
+        "name": null,
+        "image": "honeycomb",
+        "correct": false
       },
       {
-        "name" : null,
-        "image" : "kitkat",
-        "correct" : false
+        "name": null,
+        "image": "kitkat",
+        "correct": false
       },
       {
-        "name" : null,
-        "image" : "marshmallow",
-        "correct" : false
+        "name": null,
+        "image": "marshmallow",
+        "correct": false
       },
       {
-        "name" : null,
-        "image" : "oreo",
-        "correct" : true
+        "name": null,
+        "image": "oreo",
+        "correct": true
       }
-    ]}
-
-
+    ]
+  }
 ]

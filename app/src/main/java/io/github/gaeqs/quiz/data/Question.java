@@ -11,11 +11,13 @@ public class Question {
     private final String title;
     private final String image;
     private final List<Answer> answers;
+    private final boolean imageQuestion;
 
-    public Question(String title, String image, List<Answer> answers) {
+    public Question(String title, String image, List<Answer> answers, boolean imageQuestion) {
         this.title = title;
         this.image = image;
         this.answers = Collections.unmodifiableList(new ArrayList<>(answers));
+        this.imageQuestion = imageQuestion;
     }
 
     public String getTitle() {
@@ -28,6 +30,10 @@ public class Question {
 
     public List<Answer> getAnswers() {
         return answers;
+    }
+
+    public boolean isImageQuestion() {
+        return imageQuestion;
     }
 
     @NonNull

@@ -38,7 +38,7 @@
         app:layout_constraintWidth_percent="0.5" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/quiz_logo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="200dp"

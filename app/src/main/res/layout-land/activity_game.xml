@@ -38,19 +38,19 @@
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.5" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/quiz_recycle_view"
-        style="@style/Theme.Quiz"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/answers_fragment"
+        android:name="io.github.gaeqs.quiz.AnswersFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/quiz_confirm_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question_image"
-        app:layout_constraintVertical_bias="0.31" />
+        app:layout_constraintTop_toBottomOf="@+id/question_image" />
 
     <TextView
         android:id="@+id/quiz_score"

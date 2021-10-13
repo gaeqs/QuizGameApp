@@ -9,12 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.function.BiConsumer;
 
-import io.github.gaeqs.quiz.data.QuizAdapter;
 import io.github.gaeqs.quiz.game.QuizGame;
 import io.github.gaeqs.quiz.game.QuizGameStatus;
 
@@ -24,7 +21,6 @@ public class GameActivity extends AppCompatActivity {
     private ImageView qImage;
     private TextView score;
     private Button confirmButton;
-    private QuizAdapter adapter;
 
     private final BiConsumer<QuizGame, QuizGameStatus> changeListener = this::onGameStatusChange;
 
@@ -37,16 +33,8 @@ public class GameActivity extends AppCompatActivity {
         qImage = findViewById(R.id.question_image);
         score = findViewById(R.id.quiz_score);
         confirmButton = findViewById(R.id.quiz_confirm_button);
-        RecyclerView recyclerView = findViewById(R.id.quiz_recycle_view);
 
-        adapter = new QuizAdapter(this);
-
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        confirmButton.setOnClickListener(view -> {
-            QuizGame.GAME.nextQuestion();
-        });
+        confirmButton.setOnClickListener(view -> QuizGame.GAME.nextQuestion());
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -58,10 +46,8 @@ public class GameActivity extends AppCompatActivity {
 
         setQuestionImage();
 
-        score.setText("0");
+        score.setText(String.valueOf(QuizGame.GAME.getScore()));
         confirmButton.setVisibility(View.INVISIBLE);
-        adapter.setGame(QuizGame.GAME);
-
         onGameStatusChange(QuizGame.GAME, QuizGame.GAME.getStatus());
     }
 
@@ -71,11 +57,9 @@ public class GameActivity extends AppCompatActivity {
                 title.setText(game.getCurrentQuestion().getTitle());
                 setQuestionImage();
                 confirmButton.setVisibility(View.INVISIBLE);
-                adapter.prepareForNextQuestion();
                 break;
             case ANSWERED:
                 confirmButton.setVisibility(View.VISIBLE);
-                adapter.showCorrectAnswers();
                 score.setText(String.valueOf(game.getScore()));
                 break;
             case FINISHED:

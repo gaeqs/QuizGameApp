@@ -58,7 +58,12 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.QuizViewHolder
     @Override
     public QuizViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.answer_card, parent, false);
+
+        int card = game.getCurrentQuestion().isImageQuestion()
+                ? R.layout.image_answer_card
+                : R.layout.answer_card;
+
+        View view = inflater.inflate(card, parent, false);
 
         QuizViewHolder holder = new QuizViewHolder(view);
         holders.add(holder);
@@ -68,11 +73,18 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.QuizViewHolder
     @Override
     public void onBindViewHolder(@NonNull QuizViewHolder holder, int position) {
         Answer answer = game.getCurrentQuestion().getAnswers().get(position);
-        holder.image.setImageResource(answer.getImage() != null
-                ? context.getResources().getIdentifier(answer.getImage(),
-                "drawable", context.getPackageName())
-                : 0);
-        holder.text.setText(answer.getName());
+
+        if (holder.image != null) {
+            holder.image.setImageResource(answer.getImage() != null
+                    ? context.getResources().getIdentifier(answer.getImage(),
+                    "drawable", context.getPackageName())
+                    : 0);
+        }
+
+        if (holder.text != null) {
+            holder.text.setText(answer.getName());
+        }
+
         holder.correct = answer.isCorrect();
     }
 
@@ -110,9 +122,7 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.QuizViewHolder
             card = view.findViewById(R.id.answer_card);
             image = view.findViewById(R.id.answer_image);
             text = view.findViewById(R.id.answer_text);
-            card.setOnClickListener(it -> {
-                game.answer(getAdapterPosition());
-            });
+            card.setOnClickListener(it -> game.answer(getAdapterPosition()));
             if (game.getStatus() == QuizGameStatus.ANSWERED) {
                 showCorrectAnswers();
             }
