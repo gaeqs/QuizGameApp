@@ -1,7 +1,7 @@
 [
   {
     "title": "¿Cómo se conoce a la versión 5.0 de Android?",
-    "qImage": null,
+    "image": null,
     "imageQuestion": false,
     "answers": [
       {
@@ -28,7 +28,7 @@
   },
   {
     "title": "¿Cuál fue el dispositivo android más vendido de la historia?",
-    "qImage": null,
+    "image": null,
     "imageQuestion": false,
     "answers": [
       {
@@ -55,7 +55,7 @@
   },
   {
     "title": "¿Cuál de los siguientes productos no ha implementado android?",
-    "qImage": null,
+    "image": null,
     "imageQuestion": false,
     "answers": [
       {
@@ -82,7 +82,7 @@
   },
   {
     "title": "¿Cómo se llamaba anteriormente la Google Play Store?",
-    "qImage": null,
+    "image": null,
     "imageQuestion": false,
     "answers": [
       {
@@ -109,7 +109,7 @@
   },
   {
     "title": "El primer móvil android comercial fue un Samsung:",
-    "qImage": null,
+    "image": null,
     "imageQuestion": false,
     "answers": [
       {
@@ -125,8 +125,8 @@
     ]
   },
   {
-    "title": "¿Cuál es el logo de la versión 8.0",
-    "qImage": null,
+    "title": "¿Cuál es el logo de la versión 8.0?",
+    "image": null,
     "imageQuestion": true,
     "answers": [
       {
@@ -147,6 +147,33 @@
       {
         "name": null,
         "image": "oreo",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "title": "¿Dónde se encuentran las oficinas principales de Google?",
+    "image": "googlepic",
+    "imageQuestion": true,
+    "answers": [
+      {
+        "name": "Nueva York",
+        "image": "newyork",
+        "correct": false
+      },
+      {
+        "name": "Amsterdam",
+        "image": "amsterdam",
+        "correct": false
+      },
+      {
+        "name": "San Francisco",
+        "image": "sanfrancisco",
+        "correct": true
+      },
+      {
+        "name": "Londres",
+        "image": "london",
         "correct": true
       }
     ]
