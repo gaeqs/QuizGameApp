@@ -1,6 +1,6 @@
 [
   {
-    "title": "Which is the common name for Android 5.0?",
+    "title": "¿Cómo se conoce a la versión 5.0 de Android?",
     "image": null,
     "imageQuestion": false,
     "answers": [
@@ -27,7 +27,7 @@
     ]
   },
   {
-    "title": "Which device was the best-selling Android device?",
+    "title": "¿Cuál fue el dispositivo Android más vendido de la historia?",
     "image": null,
     "imageQuestion": false,
     "answers": [
@@ -54,34 +54,34 @@
     ]
   },
   {
-    "title": "Which of the following products hasn't implemented Android?",
+    "title": "¿Cuál de los siguientes productos no ha implementado Android?",
     "image": null,
     "imageQuestion": false,
     "answers": [
       {
-        "name": "Mirror",
+        "name": "Espejo",
         "image": null,
         "correct": false
       },
       {
-        "name": "Car",
+        "name": "Coche",
         "image": null,
         "correct": false
       },
       {
-        "name": "Electric guitar",
+        "name": "Guitarra Eléctrica",
         "image": null,
         "correct": true
       },
       {
-        "name": "Goggles",
+        "name": "Gafas",
         "image": null,
         "correct": false
       }
     ]
   },
   {
-    "title": "Which is the name of the old Google Play Store?",
+    "title": "¿Cómo se llamaba anteriormente la Google Play Store?",
     "image": null,
     "imageQuestion": false,
     "answers": [
@@ -108,24 +108,24 @@
     ]
   },
   {
-    "title": "The first commercial Android device was developed by Samsung:",
+    "title": "El primer móvil Android comercial fue un Samsung:",
     "image": null,
     "imageQuestion": false,
     "answers": [
       {
-        "name": "True",
+        "name": "Verdadero",
         "image": null,
         "correct": false
       },
       {
-        "name": "False",
+        "name": "Falso",
         "image": null,
         "correct": true
       }
     ]
   },
   {
-    "title": "Which is the official Android 8.0's logo?",
+    "title": "¿Cuál es el logo de la versión 8.0?",
     "image": null,
     "imageQuestion": true,
     "answers": [
@@ -152,12 +152,12 @@
     ]
   },
   {
-    "title": "Where is located Google's headquarters?",
+    "title": "¿Dónde se encuentran las oficinas principales de Google?",
     "image": "googlepic",
     "imageQuestion": false,
     "answers": [
       {
-        "name": "New York",
+        "name": "Nueva York",
         "image": "newyork",
         "correct": false
       },
@@ -172,7 +172,7 @@
         "correct": true
       },
       {
-        "name": "London",
+        "name": "Londres",
         "image": "london",
         "correct": false
       }

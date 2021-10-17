@@ -21,6 +21,7 @@ public class GameActivity extends AppCompatActivity {
     private ImageView qImage;
     private TextView score;
     private Button confirmButton;
+    private TextView correctText;
 
     private final BiConsumer<QuizGame, QuizGameStatus> changeListener = this::onGameStatusChange;
 
@@ -33,6 +34,7 @@ public class GameActivity extends AppCompatActivity {
         qImage = findViewById(R.id.question_image);
         score = findViewById(R.id.quiz_score);
         confirmButton = findViewById(R.id.quiz_confirm_button);
+        correctText = findViewById(R.id.correct_text);
 
         confirmButton.setOnClickListener(view -> QuizGame.GAME.nextQuestion());
     }
@@ -48,6 +50,7 @@ public class GameActivity extends AppCompatActivity {
 
         score.setText(String.valueOf(QuizGame.GAME.getScore()));
         confirmButton.setVisibility(View.INVISIBLE);
+        correctText.setText("");
         onGameStatusChange(QuizGame.GAME, QuizGame.GAME.getStatus());
     }
 
@@ -57,9 +60,11 @@ public class GameActivity extends AppCompatActivity {
                 title.setText(game.getCurrentQuestion().getTitle());
                 setQuestionImage();
                 confirmButton.setVisibility(View.INVISIBLE);
+                correctText.setText("");
                 break;
             case ANSWERED:
                 confirmButton.setVisibility(View.VISIBLE);
+                correctText.setText(game.isAnswerCorrect() ? R.string.correct : R.string.incorrect);
                 score.setText(String.valueOf(game.getScore()));
                 break;
             case FINISHED:

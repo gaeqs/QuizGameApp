@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="card_image">Card image</string>
+    <string name="confirm">Confirmar</string>
+    <string name="game_over">¡Game Over!</string>
+    <string name="score">Puntuación: %1$d</string>
+    <string name="quiz_game">Quiz Game</string>
+    <string name="play">Jugar</string>
+    <string name="play_again">Jugar otra vez</string>
+    <string name="main_menu">Menú principal</string>
+    <string name="question_image">Question Image</string>
+    <string name="correct">¡Correcto!</string>
+    <string name="incorrect">¡Incorrecto!</string>
+</resources>

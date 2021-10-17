@@ -9,4 +9,6 @@
     <string name="play_again">Play Again</string>
     <string name="main_menu">Main menu</string>
     <string name="question_image">Question Image</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Incorrect!</string>
 </resources>

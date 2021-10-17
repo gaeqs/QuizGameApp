@@ -38,7 +38,10 @@ public class AnswersFragment extends Fragment {
             Context context = view.getContext();
             adapter = new QuizAdapter(context);
             RecyclerView recyclerView = (RecyclerView) view;
-            recyclerView.setLayoutManager(new LinearLayoutManager(context));
+
+            list.setLayoutManager(QuizGame.GAME.getCurrentQuestion().isImageQuestion()
+                    ? new GridLayoutManager(list.getContext(), 2)
+                    : new LinearLayoutManager(list.getContext()));
 
             lastQuestionIsImage = QuizGame.GAME.getCurrentQuestion().isImageQuestion();
 
