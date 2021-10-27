@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.function.BiConsumer;
 
+import io.github.gaeqs.quiz.data.User;
+import io.github.gaeqs.quiz.database.AppDatabase;
 import io.github.gaeqs.quiz.game.QuizGame;
 import io.github.gaeqs.quiz.game.QuizGameStatus;
 
