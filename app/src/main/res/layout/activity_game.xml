@@ -24,21 +24,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/quiz_confirm_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/confirm"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
-        app:layout_constraintWidth_percent="0.5" />
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/answers_fragment"
         android:name="io.github.gaeqs.quiz.AnswersFragment"
@@ -47,13 +32,12 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="2dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/correct_text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question_image"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:layout="@layout/fragment_answers_list" />
 
     <TextView
         android:id="@+id/quiz_score"
@@ -82,16 +66,4 @@
         app:layout_constraintTop_toBottomOf="@+id/quiz_title"
         app:srcCompat="@drawable/cow" />
 
-    <TextView
-        android:id="@+id/correct_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Large Text"
-        android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/quiz_confirm_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

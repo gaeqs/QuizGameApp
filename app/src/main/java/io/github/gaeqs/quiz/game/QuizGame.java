@@ -91,6 +91,7 @@ public class QuizGame {
         score += correct ? 3 : -2;
         answeredQuestions++;
         changeStatus(QuizGameStatus.ANSWERED);
+        nextQuestion();
     }
 
     public void nextQuestion() {
