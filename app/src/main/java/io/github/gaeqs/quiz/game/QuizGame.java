@@ -39,6 +39,8 @@ public class QuizGame {
     private int answeredQuestions;
     private int selectedAnswer;
     private boolean correct;
+    private int correctAnswers;
+    private int wrongAnswers;
 
 
     public QuizGame(List<Question> questions, int maxQuestions) {
@@ -70,9 +72,17 @@ public class QuizGame {
         return selectedAnswer;
     }
 
+    public int getAnsweredQuestions() { return answeredQuestions; }
+
+    public int getCorrectAnswers(){ return correctAnswers;}
+
+    public int getWrongAnswers() { return wrongAnswers;}
+
     public boolean isAnswerCorrect() {
         return correct;
     }
+
+    public int getMaxQuestions() {return maxQuestions; }
 
     public void addChangeListener(BiConsumer<QuizGame, QuizGameStatus> listener) {
         Validate.notNull(listener, "Listener cannot be null!");
@@ -88,6 +98,14 @@ public class QuizGame {
         if (status != QuizGameStatus.ANSWERING) return;
         this.selectedAnswer = answer;
         correct = currentQuestion.getAnswers().get(answer).isCorrect();
+
+        if(correct){
+            correctAnswers++;
+        }
+        else{
+            wrongAnswers++;
+        }
+
         score += correct ? 3 : -2;
         answeredQuestions++;
         changeStatus(QuizGameStatus.ANSWERED);

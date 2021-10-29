@@ -21,9 +21,8 @@ public class GameActivity extends AppCompatActivity {
 
     private TextView title;
     private ImageView qImage;
-    private TextView score;
-    //private Button confirmButton;
-    //private TextView correctText;
+    private TextView progress;
+    private TextView results;
 
     private final BiConsumer<QuizGame, QuizGameStatus> changeListener = this::onGameStatusChange;
 
@@ -34,11 +33,8 @@ public class GameActivity extends AppCompatActivity {
 
         title = findViewById(R.id.quiz_title);
         qImage = findViewById(R.id.question_image);
-        score = findViewById(R.id.quiz_score);
-      // confirmButton = findViewById(R.id.quiz_confirm_button);
-      // correctText = findViewById(R.id.correct_text);
-
-      // confirmButton.setOnClickListener(view -> QuizGame.GAME.nextQuestion());
+        progress = findViewById(R.id.progressnum_text);
+        results = findViewById(R.id.resultsnum_text);
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -47,12 +43,12 @@ public class GameActivity extends AppCompatActivity {
         super.onStart();
         QuizGame.GAME.addChangeListener(changeListener);
         title.setText(QuizGame.GAME.getCurrentQuestion().getTitle());
+        results.setText("0 / 0");
+
+        progress.setText("0 / "
+                + String.valueOf(QuizGame.GAME.getMaxQuestions()));
 
         setQuestionImage();
-
-        score.setText(String.valueOf(QuizGame.GAME.getScore()));
-       // confirmButton.setVisibility(View.INVISIBLE);
-       // correctText.setText("");
         onGameStatusChange(QuizGame.GAME, QuizGame.GAME.getStatus());
     }
 
@@ -61,13 +57,13 @@ public class GameActivity extends AppCompatActivity {
             case ANSWERING:
                 title.setText(game.getCurrentQuestion().getTitle());
                 setQuestionImage();
-               // confirmButton.setVisibility(View.INVISIBLE);
-               // correctText.setText("");
                 break;
             case ANSWERED:
-              //  confirmButton.setVisibility(View.VISIBLE);
-              //  correctText.setText(game.isAnswerCorrect() ? R.string.correct : R.string.incorrect);
-                score.setText(String.valueOf(game.getScore()));
+                progress.setText(String.valueOf(game.getAnsweredQuestions()) + " / "
+                    + String.valueOf(game.getMaxQuestions()));
+
+                results.setText(String.valueOf(game.getCorrectAnswers()) + " / "
+                        + String.valueOf(game.getWrongAnswers()));
                 break;
             case FINISHED:
                 Intent intent = new Intent(this, ScoreActivity.class);
