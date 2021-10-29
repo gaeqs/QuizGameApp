@@ -4,13 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Dev/AndroidStudioProjects/QuizGameApp/app/src/main/res/layout-land/activity_game.xml" value="0.31393298059964725" />
+        <entry key="..\:/Dev/AndroidStudioProjects/QuizGameApp/app/src/main/res/layout-land/activity_main.xml" value="0.47266313932980597" />
+        <entry key="..\:/Dev/AndroidStudioProjects/QuizGameApp/app/src/main/res/layout/activity_config.xml" value="0.33" />
         <entry key="..\:/Dev/AndroidStudioProjects/QuizGameApp/app/src/main/res/layout/activity_game.xml" value="0.33" />
         <entry key="..\:/Dev/AndroidStudioProjects/QuizGameApp/app/src/main/res/layout/activity_main.xml" value="0.37083333333333335" />
         <entry key="..\:/Dev/AndroidStudioProjects/QuizGameApp/app/src/main/res/layout/activity_score.xml" value="0.37083333333333335" />
+        <entry key="..\:/Dev/AndroidStudioProjects/QuizGameApp/app/src/main/res/layout/answer_card.xml" value="0.4995471014492754" />
+        <entry key="..\:/Dev/AndroidStudioProjects/QuizGameApp/app/src/main/res/layout/image_answer_card.xml" value="0.41893115942028986" />
         <entry key="..\:/Users/Nacho/Documents/GitHub/QuizGameApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Nacho/Documents/GitHub/QuizGameApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.13229166666666667" />
         <entry key="..\:/Users/Nacho/Documents/GitHub/QuizGameApp/app/src/main/res/layout-land/activity_game.xml" value="0.19322916666666667" />
-        <entry key="..\:/Users/Nacho/Documents/GitHub/QuizGameApp/app/src/main/res/layout/activity_game.xml" value="0.264" />
+        <entry key="..\:/Users/Nacho/Documents/GitHub/QuizGameApp/app/src/main/res/layout/activity_game.xml" value="0.176" />
         <entry key="..\:/Users/Nacho/Documents/GitHub/QuizGameApp/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/Nacho/Documents/GitHub/QuizGameApp/app/src/main/res/layout/activity_score.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Nacho/Documents/GitHub/QuizGameApp/app/src/main/res/layout/answer_card.xml" value="0.13020833333333334" />

@@ -12,4 +12,9 @@
     <string name="question_image">Question Image</string>
     <string name="correct">¡Correcto!</string>
     <string name="incorrect">¡Incorrecto!</string>
+    <string name="questions">Preguntas: %1$d</string>
+    <string name="difficulty">Dificultad: %1$s</string>
+    <string name="difficulty_easy">Fácil</string>
+    <string name="difficulty_normal">Normal</string>
+    <string name="difficulty_hard">Difícil</string>
 </resources>

@@ -1,6 +1,7 @@
 package io.github.gaeqs.quiz.game;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -8,6 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.function.BiConsumer;
 
+import io.github.gaeqs.quiz.ConfigurationActivity;
 import io.github.gaeqs.quiz.R;
 import io.github.gaeqs.quiz.data.Question;
 import io.github.gaeqs.quiz.util.JSONUtils;
@@ -25,7 +27,18 @@ public class QuizGame {
             e.printStackTrace();
             return;
         }
-        GAME = new QuizGame(questions, 5);
+
+        SharedPreferences preferences =
+                context.getSharedPreferences(ConfigurationActivity.PREFERENCES, 0);
+
+        // Difficulty still not being used!
+        Difficulty difficulty = Difficulty.values()
+                [preferences.getInt(ConfigurationActivity.PREFERENCES_DIFFICULTY, 1)];
+
+        QuestionsAmount amount = QuestionsAmount.values()
+                [preferences.getInt(ConfigurationActivity.PREFERENCES_QUESTIONS_AMOUNT, 1)];
+
+        GAME = new QuizGame(questions, amount.getAmount());
     }
 
     private final List<Question> questions;
@@ -72,17 +85,25 @@ public class QuizGame {
         return selectedAnswer;
     }
 
-    public int getAnsweredQuestions() { return answeredQuestions; }
+    public int getAnsweredQuestions() {
+        return answeredQuestions;
+    }
 
-    public int getCorrectAnswers(){ return correctAnswers;}
+    public int getCorrectAnswers() {
+        return correctAnswers;
+    }
 
-    public int getWrongAnswers() { return wrongAnswers;}
+    public int getWrongAnswers() {
+        return wrongAnswers;
+    }
 
     public boolean isAnswerCorrect() {
         return correct;
     }
 
-    public int getMaxQuestions() {return maxQuestions; }
+    public int getMaxQuestions() {
+        return maxQuestions;
+    }
 
     public void addChangeListener(BiConsumer<QuizGame, QuizGameStatus> listener) {
         Validate.notNull(listener, "Listener cannot be null!");
@@ -99,10 +120,9 @@ public class QuizGame {
         this.selectedAnswer = answer;
         correct = currentQuestion.getAnswers().get(answer).isCorrect();
 
-        if(correct){
+        if (correct) {
             correctAnswers++;
-        }
-        else{
+        } else {
             wrongAnswers++;
         }
 

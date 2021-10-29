@@ -46,4 +46,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/androidquizlogo" />
 
+    <ImageView
+        android:id="@+id/main_settings"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="configuration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_preferences" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

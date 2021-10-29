@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, GameActivity.class));
     }
 
+    public void configuration(View view) {
+        QuizGame.startNewGame(this);
+        startActivity(new Intent(this, ConfigurationActivity.class));
+    }
+
     @Override
     public void onBackPressed() {
         moveTaskToBack(true);
