@@ -55,8 +55,8 @@ public class QuizGame {
     private int correctAnswers;
     private int wrongAnswers;
 
-    private float initTime;
-    private float finishTime;
+    private long initTime;
+    private long finishTime;
 
 
     public QuizGame(List<Question> questions, int maxQuestions) {
@@ -72,6 +72,7 @@ public class QuizGame {
         this.statusChangeEvent = new LinkedList<>();
 
         this.initTime = System.currentTimeMillis();
+        this.finishTime = 0;
     }
 
     public QuizGameStatus getStatus() {
@@ -162,7 +163,7 @@ public class QuizGame {
         statusChangeEvent.forEach(it -> it.accept(this, status));
     }
 
-    public float getFinishTime() {
+    public long getFinishTime() {
         return finishTime;
     }
 }

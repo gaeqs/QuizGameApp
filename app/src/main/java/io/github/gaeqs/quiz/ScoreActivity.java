@@ -7,13 +7,16 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
+import io.github.gaeqs.quiz.database.UserStorage;
 import io.github.gaeqs.quiz.game.QuizGame;
 
 public class ScoreActivity extends AppCompatActivity {
 
     private TextView score;
     private TextView time;
+    private UserStorage storage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,8 @@ public class ScoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_score);
         score = findViewById(R.id.score_score);
         time = findViewById(R.id.time_text);
+
+        storage = new ViewModelProvider(this).get(UserStorage.class);
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -30,11 +35,13 @@ public class ScoreActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             int receivedScore = intent.getIntExtra("score", 0);
-            float receiveTime = intent.getFloatExtra("finishTime", 0);
+            long receiveTime = intent.getLongExtra("finishTime", 0) / 1000;
             String scoreMessage = getResources().getString(R.string.score, receivedScore);
             String timeMessage = getResources().getString(R.string.finishTime, receiveTime);
             score.setText(scoreMessage);
             time.setText(timeMessage);
+
+
         }
     }
 
