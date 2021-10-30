@@ -1,8 +1,10 @@
 package io.github.gaeqs.quiz.display;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,27 +16,26 @@ import io.github.gaeqs.quiz.R;
 import io.github.gaeqs.quiz.game.QuizGame;
 import io.github.gaeqs.quiz.game.QuizGameStatus;
 
-public class ImageDisplayFragment extends Fragment {
+public class VideoDisplayFragment extends Fragment {
 
     private final BiConsumer<QuizGame, QuizGameStatus> listener = this::onGameStatusChange;
+    private VideoView videoView;
 
-    private ImageView imageView;
-
-    public ImageDisplayFragment() {
-        super(R.layout.activity_game_image);
+    public VideoDisplayFragment() {
+        super(R.layout.activity_game_video);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        imageView = view.findViewById(R.id.activity_game_image_image);
+        videoView = view.findViewById(R.id.activity_game_video_video);
     }
 
     @Override
     public void onStart() {
         super.onStart();
         QuizGame.GAME.addChangeListener(listener);
-        setQuestionImage();
+        setQuestionVideo();
     }
 
     @Override
@@ -47,7 +48,7 @@ public class ImageDisplayFragment extends Fragment {
     private void onGameStatusChange(QuizGame game, QuizGameStatus status) {
         switch (status) {
             case ANSWERING:
-                setQuestionImage();
+                setQuestionVideo();
                 break;
             case ANSWERED:
             case FINISHED:
@@ -55,14 +56,15 @@ public class ImageDisplayFragment extends Fragment {
         }
     }
 
-    private void setQuestionImage() {
-        String imgRes = QuizGame.GAME.getCurrentQuestion().getImage();
-        if (imgRes != null) {
-            imageView.setImageResource(getResources().getIdentifier(imgRes, "drawable",
-                    getContext().getPackageName()));
+    private void setQuestionVideo() {
 
-        } else {
-            imageView.setImageResource(0);
+        String vidRes = QuizGame.GAME.getCurrentQuestion().getVideo();
+        if (vidRes != null) {
+            videoView.setVideoURI(Uri.parse("android.resource://"
+                    + getContext().getPackageName() + "/" + vidRes));
+            videoView.setMediaController(new MediaController(getContext()));
+            videoView.requestFocus();
+            videoView.start();
         }
     }
 }
