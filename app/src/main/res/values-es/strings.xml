@@ -17,4 +17,7 @@
     <string name="difficulty_easy">Fácil</string>
     <string name="difficulty_normal">Normal</string>
     <string name="difficulty_hard">Difícil</string>
+    <string name="create_user">Crear usuario</string>
+    <string name="create_user_name">Nombre:</string>
+    <string name="create_user_camera">Abrir cámara</string>
 </resources>

@@ -1,5 +1,6 @@
 package io.github.gaeqs.quiz;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -43,6 +44,10 @@ public class ConfigurationActivity extends AppCompatActivity {
     public void confirm(View view) {
         editor.apply();
         finish();
+    }
+
+    public void createUser(View view) {
+        startActivity(new Intent(this, CreateUserActivity.class));
     }
 
     public void toggleDifficulty(View view) {

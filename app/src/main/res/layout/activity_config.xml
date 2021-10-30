@@ -35,6 +35,16 @@
             android:text="@string/questions"
             android:textColor="@color/white"
             android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/configuration_create_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:onClick="createUser"
+            android:text="@string/create_user"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <Button

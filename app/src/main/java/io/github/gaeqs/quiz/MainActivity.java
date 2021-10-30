@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void configuration(View view) {
-        QuizGame.startNewGame(this);
         startActivity(new Intent(this, ConfigurationActivity.class));
     }
 
