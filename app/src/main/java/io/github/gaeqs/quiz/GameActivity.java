@@ -3,24 +3,20 @@ package io.github.gaeqs.quiz;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import java.util.function.BiConsumer;
 
-import io.github.gaeqs.quiz.data.User;
-import io.github.gaeqs.quiz.database.AppDatabase;
+import io.github.gaeqs.quiz.display.ImageDisplayFragment;
 import io.github.gaeqs.quiz.game.QuizGame;
 import io.github.gaeqs.quiz.game.QuizGameStatus;
 
 public class GameActivity extends AppCompatActivity {
 
     private TextView title;
-    private ImageView qImage;
     private TextView progress;
     private TextView results;
 
@@ -32,7 +28,6 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         title = findViewById(R.id.quiz_title);
-        qImage = findViewById(R.id.question_image);
         progress = findViewById(R.id.progressnum_text);
         results = findViewById(R.id.resultsnum_text);
     }
@@ -43,12 +38,11 @@ public class GameActivity extends AppCompatActivity {
         super.onStart();
         QuizGame.GAME.addChangeListener(changeListener);
         title.setText(QuizGame.GAME.getCurrentQuestion().getTitle());
+
         results.setText("0 / 0");
+        progress.setText("0 / " + QuizGame.GAME.getMaxQuestions());
 
-        progress.setText("0 / "
-                + String.valueOf(QuizGame.GAME.getMaxQuestions()));
-
-        setQuestionImage();
+        initFragment();
         onGameStatusChange(QuizGame.GAME, QuizGame.GAME.getStatus());
     }
 
@@ -57,11 +51,11 @@ public class GameActivity extends AppCompatActivity {
         switch (status) {
             case ANSWERING:
                 title.setText(game.getCurrentQuestion().getTitle());
-                setQuestionImage();
+                initFragment();
                 break;
             case ANSWERED:
                 progress.setText(game.getAnsweredQuestions() + " / "
-                    + game.getMaxQuestions());
+                        + game.getMaxQuestions());
 
                 results.setText(game.getCorrectAnswers() + " / "
                         + game.getWrongAnswers());
@@ -76,16 +70,6 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
-    private void setQuestionImage() {
-        String imgRes = QuizGame.GAME.getCurrentQuestion().getImage();
-        if (imgRes != null) {
-            qImage.setImageResource(getResources().getIdentifier(imgRes, "drawable", getPackageName()));
-
-        } else {
-            qImage.setImageResource(0);
-        }
-    }
-
     @Override
     public void onBackPressed() {
         moveTaskToBack(true);
@@ -95,6 +79,20 @@ public class GameActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         QuizGame.GAME.removeChangeListener(changeListener);
+    }
+
+    private void initFragment() {
+        Class<? extends Fragment> clazz = Fragment.class;
+
+        if (QuizGame.GAME.getCurrentQuestion().getImage() != null) {
+            clazz = ImageDisplayFragment.class;
+        }
+
+        getSupportFragmentManager().beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.question_display, clazz, null)
+                .addToBackStack(null)
+                .commit();
     }
 
 
