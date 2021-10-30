@@ -4,6 +4,7 @@
     <string name="confirm">Confirm</string>
     <string name="game_over">Game Over!</string>
     <string name="score">Score: %1$d</string>
+    <string name="finishTime">Time : %1$d </string>
     <string name="quiz_game">Quiz Game</string>
     <string name="play">Play</string>
     <string name="play_again">Play Again</string>

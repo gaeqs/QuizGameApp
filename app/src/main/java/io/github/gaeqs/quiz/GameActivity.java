@@ -52,6 +52,7 @@ public class GameActivity extends AppCompatActivity {
         onGameStatusChange(QuizGame.GAME, QuizGame.GAME.getStatus());
     }
 
+    @SuppressLint("SetTextI18n")
     private void onGameStatusChange(QuizGame game, QuizGameStatus status) {
         switch (status) {
             case ANSWERING:
@@ -59,15 +60,16 @@ public class GameActivity extends AppCompatActivity {
                 setQuestionImage();
                 break;
             case ANSWERED:
-                progress.setText(String.valueOf(game.getAnsweredQuestions()) + " / "
-                    + String.valueOf(game.getMaxQuestions()));
+                progress.setText(game.getAnsweredQuestions() + " / "
+                    + game.getMaxQuestions());
 
-                results.setText(String.valueOf(game.getCorrectAnswers()) + " / "
-                        + String.valueOf(game.getWrongAnswers()));
+                results.setText(game.getCorrectAnswers() + " / "
+                        + game.getWrongAnswers());
                 break;
             case FINISHED:
                 Intent intent = new Intent(this, ScoreActivity.class);
                 intent.putExtra("score", game.getScore());
+                intent.putExtra("finishTime", game.getFinishTime());
                 startActivity(intent);
                 break;
         }

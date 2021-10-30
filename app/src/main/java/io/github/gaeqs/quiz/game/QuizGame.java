@@ -55,6 +55,9 @@ public class QuizGame {
     private int correctAnswers;
     private int wrongAnswers;
 
+    private float initTime;
+    private float finishTime;
+
 
     public QuizGame(List<Question> questions, int maxQuestions) {
         Validate.notNull(questions, "Questions cannot be null!");
@@ -67,6 +70,8 @@ public class QuizGame {
         this.currentQuestion = unusedQuestions.pop();
         this.status = QuizGameStatus.ANSWERING;
         this.statusChangeEvent = new LinkedList<>();
+
+        this.initTime = System.currentTimeMillis();
     }
 
     public QuizGameStatus getStatus() {
@@ -137,6 +142,7 @@ public class QuizGame {
 
         if (answeredQuestions >= maxQuestions) {
             // FINISH!
+            finishTime = System.currentTimeMillis() - initTime;
             changeStatus(QuizGameStatus.FINISHED);
             return;
         }
@@ -154,5 +160,9 @@ public class QuizGame {
     private void changeStatus(QuizGameStatus status) {
         this.status = status;
         statusChangeEvent.forEach(it -> it.accept(this, status));
+    }
+
+    public float getFinishTime() {
+        return finishTime;
     }
 }

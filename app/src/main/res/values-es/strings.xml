@@ -5,6 +5,7 @@
     <string name="confirm">Confirmar</string>
     <string name="game_over">¡Game Over!</string>
     <string name="score">Puntuación: %1$d</string>
+    <string name="finishTime">Tiempo: %1$d </string>
     <string name="quiz_game">Quiz Game</string>
     <string name="play">Jugar</string>
     <string name="play_again">Jugar otra vez</string>
