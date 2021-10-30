@@ -81,7 +81,7 @@ public class CreateUserActivity extends AppCompatActivity {
     }
 
     public void confirm(View view) {
-        User user = new User(nameTextField.getText().toString(), photoFile.getAbsolutePath());
+        User user = new User(sanitizeUsername(nameTextField.getText().toString()), photoFile.getAbsolutePath());
         if (storage.addNewUser(user)) {
             finish();
         }
@@ -96,10 +96,15 @@ public class CreateUserActivity extends AppCompatActivity {
     }
 
     private void refreshConfirmStatus() {
-        String text = nameTextField.getText().toString();
+        String name = sanitizeUsername(nameTextField.getText().toString());
         confirmButton.setEnabled(hasImage
-                && !text.isEmpty()
-                && users.stream().noneMatch(it -> it.getName().equalsIgnoreCase(text)));
+                && !name.isEmpty()
+                && users.stream().noneMatch(it -> it.getName().equalsIgnoreCase(name)));
+    }
+
+
+    private String sanitizeUsername(String name) {
+        return name.trim();
     }
 
     // region camera
