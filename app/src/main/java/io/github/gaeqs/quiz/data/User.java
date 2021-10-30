@@ -28,15 +28,19 @@ public class User {
     @ColumnInfo(name = "maximum_score")
     private int maximumScore;
 
+    @ColumnInfo(name = "maximum_score_time")
+    private int maximumScoreTime;
+
     @ColumnInfo(name = "last_played")
     private long lastPlayed;
 
 
-    public User(@NonNull String name, String imagePath, int matches, int maximumScore, long lastPlayed) {
+    public User(@NonNull String name, String imagePath, int matches, int maximumScore, int maximumScoreTime, long lastPlayed) {
         this.name = name;
         this.imagePath = imagePath;
         this.matches = matches;
         this.maximumScore = maximumScore;
+        this.maximumScoreTime = maximumScoreTime;
         this.lastPlayed = lastPlayed;
     }
 
@@ -74,6 +78,14 @@ public class User {
 
     public void setMaximumScore(int maximumScore) {
         this.maximumScore = maximumScore;
+    }
+
+    public int getMaximumScoreTime() {
+        return maximumScoreTime;
+    }
+
+    public void setMaximumScoreTime(int maximumScoreTime) {
+        this.maximumScoreTime = maximumScoreTime;
     }
 
     public long getLastPlayed() {
