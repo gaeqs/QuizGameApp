@@ -9,40 +9,41 @@
 
     <TextView
         android:id="@+id/quiz_title"
-        android:layout_width="462dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
         android:text="Large Text"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintEnd_toStartOf="@+id/question_display"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/results_text" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/answers_fragment"
         android:name="io.github.gaeqs.quiz.AnswersFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="720dp"
+        android:layout_height="255dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quiz_title" />
+        app:layout_constraintTop_toBottomOf="@+id/question_display" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/question_display"
-        android:layout_width="219dp"
-        android:layout_height="112dp"
+        android:layout_width="256dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
-        app:layout_constraintStart_toEndOf="@+id/quiz_title"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.053" />
 
