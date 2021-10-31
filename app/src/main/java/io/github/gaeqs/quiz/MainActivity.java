@@ -1,6 +1,7 @@
 package io.github.gaeqs.quiz;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void play(View view) {
-        QuizGame.startNewGame(this);
+        SharedPreferences preferences = getSharedPreferences(ConfigurationActivity.PREFERENCES, 0);
+        String username = preferences.getString(ConfigurationActivity.PREFERENCES_USER, null);
+        QuizGame.startNewGame(this, username);
         startActivity(new Intent(this, GameActivity.class));
     }
 

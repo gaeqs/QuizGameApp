@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.BiConsumer;
 
 import io.github.gaeqs.quiz.ConfigurationActivity;
@@ -19,7 +20,7 @@ public class QuizGame {
 
     public static QuizGame GAME = null;
 
-    public static void startNewGame(Context context) {
+    public static void startNewGame(Context context, String username) {
         List<Question> questions;
         try {
             questions = JSONUtils.readQuestionsFromJSON(context, R.raw.quizzes);
@@ -38,8 +39,10 @@ public class QuizGame {
         QuestionsAmount amount = QuestionsAmount.values()
                 [preferences.getInt(ConfigurationActivity.PREFERENCES_QUESTIONS_AMOUNT, 1)];
 
-        GAME = new QuizGame(questions, amount.getAmount());
+        GAME = new QuizGame(questions, username, amount.getAmount());
     }
+
+    private final String username;
 
     private final List<Question> questions;
     private final LinkedList<Question> unusedQuestions;
@@ -59,9 +62,10 @@ public class QuizGame {
     private long finishTime;
 
 
-    public QuizGame(List<Question> questions, int maxQuestions) {
+    public QuizGame(List<Question> questions, String username, int maxQuestions) {
         Validate.notNull(questions, "Questions cannot be null!");
         Validate.isTrue(!questions.isEmpty(), "Questions cannot be empty!");
+        this.username = username;
         this.questions = questions;
         this.maxQuestions = maxQuestions;
         this.unusedQuestions = new LinkedList<>(questions);
@@ -73,6 +77,10 @@ public class QuizGame {
 
         this.initTime = System.currentTimeMillis();
         this.finishTime = 0;
+    }
+
+    public Optional<String> getUsername() {
+        return Optional.ofNullable(username);
     }
 
     public QuizGameStatus getStatus() {

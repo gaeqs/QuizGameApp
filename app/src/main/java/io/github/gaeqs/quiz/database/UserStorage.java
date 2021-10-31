@@ -6,6 +6,8 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.Future;
 
 import io.github.gaeqs.quiz.data.User;
 import io.github.gaeqs.quiz.util.Validate;
@@ -22,6 +24,11 @@ public class UserStorage extends AndroidViewModel {
 
     public LiveData<List<User>> getUsers() {
         return users;
+    }
+
+    public Future<Optional<User>> getUser(String name) {
+        return AppDatabase.databaseWriteExecutor.submit(() ->
+                Optional.ofNullable(AppDatabase.INSTANCE.userDao().getUser(name)));
     }
 
     public boolean addNewUser(User user) {

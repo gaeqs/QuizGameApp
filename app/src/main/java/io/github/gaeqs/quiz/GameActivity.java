@@ -68,6 +68,7 @@ public class GameActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, ScoreActivity.class);
                 intent.putExtra("score", game.getScore());
                 intent.putExtra("finishTime", game.getFinishTime());
+                intent.putExtra("username", game.getUsername().orElse(null));
                 startActivity(intent);
                 break;
         }
@@ -92,7 +93,7 @@ public class GameActivity extends AppCompatActivity {
             clazz = ImageDisplayFragment.class;
         } else if (QuizGame.GAME.getCurrentQuestion().getVideo() != null) {
             clazz = VideoDisplayFragment.class;
-        } else if(QuizGame.GAME.getCurrentQuestion().getAudio() != null) {
+        } else if (QuizGame.GAME.getCurrentQuestion().getAudio() != null) {
             clazz = AudioDisplayFragment.class;
         }
 

@@ -16,6 +16,7 @@ public class ConfigurationActivity extends AppCompatActivity {
     public static final String PREFERENCES = "preferences";
     public static final String PREFERENCES_DIFFICULTY = "difficulty";
     public static final String PREFERENCES_QUESTIONS_AMOUNT = "questions_amount";
+    public static final String PREFERENCES_USER = "user";
 
     private Button buttonDifficulty, buttonQuestions;
     private Difficulty difficulty;
