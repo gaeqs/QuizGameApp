@@ -10,12 +10,14 @@ public class Question {
 
     private final String title;
     private final String image;
+    private final String video;
     private final List<Answer> answers;
     private final boolean imageQuestion;
 
-    public Question(String title, String image, List<Answer> answers, boolean imageQuestion) {
+    public Question(String title, String image, String video, List<Answer> answers, boolean imageQuestion) {
         this.title = title;
         this.image = image;
+        this.video = video;
         this.answers = Collections.unmodifiableList(new ArrayList<>(answers));
         this.imageQuestion = imageQuestion;
     }
@@ -24,8 +26,12 @@ public class Question {
         return title;
     }
 
-    public String getImage(){
+    public String getImage() {
         return image;
+    }
+
+    public String getVideo() {
+        return video;
     }
 
     public List<Answer> getAnswers() {

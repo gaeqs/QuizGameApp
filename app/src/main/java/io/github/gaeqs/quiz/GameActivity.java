@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import java.util.function.BiConsumer;
 
 import io.github.gaeqs.quiz.display.ImageDisplayFragment;
+import io.github.gaeqs.quiz.display.VideoDisplayFragment;
 import io.github.gaeqs.quiz.game.QuizGame;
 import io.github.gaeqs.quiz.game.QuizGameStatus;
 
@@ -19,6 +20,8 @@ public class GameActivity extends AppCompatActivity {
     private TextView title;
     private TextView progress;
     private TextView results;
+
+    private Class<? extends Fragment> currentDisplayFragment = null;
 
     private final BiConsumer<QuizGame, QuizGameStatus> changeListener = this::onGameStatusChange;
 
@@ -86,8 +89,12 @@ public class GameActivity extends AppCompatActivity {
 
         if (QuizGame.GAME.getCurrentQuestion().getImage() != null) {
             clazz = ImageDisplayFragment.class;
+        } else if (QuizGame.GAME.getCurrentQuestion().getVideo() != null) {
+            clazz = VideoDisplayFragment.class;
         }
 
+        if (currentDisplayFragment == clazz) return;
+        currentDisplayFragment = clazz;
         getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
                 .replace(R.id.question_display, clazz, null)
