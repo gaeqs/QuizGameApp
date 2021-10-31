@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 
 import java.util.function.BiConsumer;
 
+import io.github.gaeqs.quiz.display.AudioDisplayFragment;
 import io.github.gaeqs.quiz.display.ImageDisplayFragment;
 import io.github.gaeqs.quiz.display.VideoDisplayFragment;
 import io.github.gaeqs.quiz.game.QuizGame;
@@ -91,6 +92,8 @@ public class GameActivity extends AppCompatActivity {
             clazz = ImageDisplayFragment.class;
         } else if (QuizGame.GAME.getCurrentQuestion().getVideo() != null) {
             clazz = VideoDisplayFragment.class;
+        } else if(QuizGame.GAME.getCurrentQuestion().getAudio() != null) {
+            clazz = AudioDisplayFragment.class;
         }
 
         if (currentDisplayFragment == clazz) return;

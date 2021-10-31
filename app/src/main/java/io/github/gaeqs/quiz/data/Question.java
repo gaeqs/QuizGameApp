@@ -11,13 +11,15 @@ public class Question {
     private final String title;
     private final String image;
     private final String video;
+    private final String audio;
     private final List<Answer> answers;
     private final boolean imageQuestion;
 
-    public Question(String title, String image, String video, List<Answer> answers, boolean imageQuestion) {
+    public Question(String title, String image, String video, String audio, List<Answer> answers, boolean imageQuestion) {
         this.title = title;
         this.image = image;
         this.video = video;
+        this.audio = audio;
         this.answers = Collections.unmodifiableList(new ArrayList<>(answers));
         this.imageQuestion = imageQuestion;
     }
@@ -32,6 +34,10 @@ public class Question {
 
     public String getVideo() {
         return video;
+    }
+
+    public String getAudio() {
+        return audio;
     }
 
     public List<Answer> getAnswers() {
