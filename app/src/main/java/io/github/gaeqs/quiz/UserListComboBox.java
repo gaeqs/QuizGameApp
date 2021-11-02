@@ -16,7 +16,9 @@ import androidx.lifecycle.ViewModelProvider;
 import java.util.Arrays;
 import java.util.List;
 
+import io.github.gaeqs.quiz.activity.ConfigurationActivity;
 import io.github.gaeqs.quiz.data.User;
+import io.github.gaeqs.quiz.data.UserAdapter;
 import io.github.gaeqs.quiz.database.UserStorage;
 
 /**
@@ -25,7 +27,6 @@ import io.github.gaeqs.quiz.database.UserStorage;
 public class UserListComboBox extends Fragment {
 
     private Spinner spinner;
-    private final Observer<List<User>> observer = this::onListChange;
 
     public UserListComboBox() {
         super(R.layout.user_list_combo_box);
@@ -55,44 +56,18 @@ public class UserListComboBox extends Fragment {
                 editor.apply();
             }
         });
+
+        UserAdapter adapter = new UserAdapter(spinner, this, this);
+        spinner.setAdapter(adapter);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        UserStorage storage = new ViewModelProvider(this).get(UserStorage.class);
-        storage.getUsers().observe(this, observer);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        UserStorage storage = new ViewModelProvider(this).get(UserStorage.class);
-        storage.getUsers().removeObserver(observer);
     }
-
-
-    private void onListChange(List<User> list) {
-        String[] array = new String[list.size()];
-        int i = 0;
-        for (User user : list) {
-            array[i] = user.getName();
-            i++;
-        }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),
-                android.R.layout.simple_spinner_item, array);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-
-        SharedPreferences preferences = getContext()
-                .getSharedPreferences(ConfigurationActivity.PREFERENCES, 0);
-        String user = preferences.getString(ConfigurationActivity.PREFERENCES_USER, null);
-        if (user != null) {
-            int index = Arrays.asList(array).indexOf(user);
-            if (index == -1) return;
-            spinner.setSelection(index);
-        }
-    }
-
 }

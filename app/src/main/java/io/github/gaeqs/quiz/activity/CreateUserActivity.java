@@ -1,4 +1,4 @@
-package io.github.gaeqs.quiz;
+package io.github.gaeqs.quiz.activity;
 
 import android.Manifest;
 import android.content.Intent;
@@ -31,6 +31,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
+import io.github.gaeqs.quiz.R;
 import io.github.gaeqs.quiz.data.User;
 import io.github.gaeqs.quiz.database.UserStorage;
 

@@ -1,4 +1,4 @@
-package io.github.gaeqs.quiz;
+package io.github.gaeqs.quiz.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 
 import java.util.function.BiConsumer;
 
+import io.github.gaeqs.quiz.R;
 import io.github.gaeqs.quiz.display.AudioDisplayFragment;
 import io.github.gaeqs.quiz.display.ImageDisplayFragment;
 import io.github.gaeqs.quiz.display.VideoDisplayFragment;

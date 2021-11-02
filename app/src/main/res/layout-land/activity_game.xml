@@ -5,7 +5,7 @@
     style="@style/Theme.Quiz"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameActivity">
+    tools:context=".activity.GameActivity">
 
     <TextView
         android:id="@+id/quiz_title"

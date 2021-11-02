@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.BiConsumer;
 
-import io.github.gaeqs.quiz.ConfigurationActivity;
+import io.github.gaeqs.quiz.activity.ConfigurationActivity;
 import io.github.gaeqs.quiz.R;
 import io.github.gaeqs.quiz.data.Question;
 import io.github.gaeqs.quiz.util.JSONUtils;

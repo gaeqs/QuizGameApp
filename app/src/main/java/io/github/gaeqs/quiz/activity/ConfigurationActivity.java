@@ -1,4 +1,4 @@
-package io.github.gaeqs.quiz;
+package io.github.gaeqs.quiz.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import io.github.gaeqs.quiz.R;
 import io.github.gaeqs.quiz.game.Difficulty;
 import io.github.gaeqs.quiz.game.QuestionsAmount;
 

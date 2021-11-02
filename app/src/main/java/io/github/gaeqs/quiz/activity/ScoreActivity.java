@@ -1,4 +1,4 @@
-package io.github.gaeqs.quiz;
+package io.github.gaeqs.quiz.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,11 +8,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 
+import io.github.gaeqs.quiz.R;
 import io.github.gaeqs.quiz.data.User;
 import io.github.gaeqs.quiz.database.AppDatabase;
-import io.github.gaeqs.quiz.database.UserStorage;
 import io.github.gaeqs.quiz.game.QuizGame;
 
 public class ScoreActivity extends AppCompatActivity {
