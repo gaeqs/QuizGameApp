@@ -60,9 +60,9 @@
         app:srcCompat="@android:drawable/ic_menu_preferences" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/users"
         android:name="io.github.gaeqs.quiz.UserListComboBox"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/main_play"
