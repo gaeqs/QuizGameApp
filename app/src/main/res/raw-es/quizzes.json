@@ -212,5 +212,141 @@
         "correct": false
       }
     ]
+  },
+
+  {
+    "title": "¿Para qué marca colaboraron BTS en este video?",
+    "image": null,
+    "video": "bts",
+    "audio": null,
+    "imageQuestion": false,
+    "difficulty": [
+      "HARD"
+    ],
+    "answers": [
+      {
+        "name": "Xiaomi",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Oppo",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Samsung",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Huawei",
+        "image": null,
+        "correct": false
+      }
+    ]
+  },
+
+  {
+    "title": "¿Qué móviles usan el siguiente sonido de notificación?",
+    "image": null,
+    "video": null,
+    "audio": "xiaomi",
+    "imageQuestion": false,
+    "difficulty": [
+      "NORMAL"
+    ],
+    "answers": [
+      {
+        "name": "Xiaomi",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Motorola",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Samsung",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Huawei",
+        "image": null,
+        "correct": false
+      }
+    ]
+  },
+
+  {
+    "title": "¿En qué dispositivos puedes escuchar el siguiente tono de llamada?",
+    "image": null,
+    "video": null,
+    "audio": "huawei",
+    "imageQuestion": false,
+    "difficulty": [
+      "NORMAL"
+    ],
+    "answers": [
+      {
+        "name": "LG",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Motorola",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Samsung",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Huawei",
+        "image": null,
+        "correct": true
+      }
+    ]
+  },
+
+  {
+    "title": "¿Cómo se llama este conocido analista de móviles?",
+    "image": null,
+    "video": "pro_android",
+    "audio": null,
+    "imageQuestion": false,
+    "difficulty": [
+      "NORMAL",
+      "HARD"
+    ],
+    "answers": [
+      {
+        "name": "Topes de Gama",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "TuTecnoMundo",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Pro Android",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Xataka TV",
+        "image": null,
+        "correct": false
+      }
+    ]
   }
+
+
+
 ]
