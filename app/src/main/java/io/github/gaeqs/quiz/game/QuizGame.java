@@ -37,7 +37,7 @@ public class QuizGame {
         Difficulty difficulty = Difficulty.values()
                 [preferences.getInt(ConfigurationActivity.PREFERENCES_DIFFICULTY, 1)];
 
-        questions = questions.stream().filter(it -> it.getDifficulty() == difficulty)
+        questions = questions.stream().filter(it -> it.getDifficulties().contains(difficulty))
                 .collect(Collectors.toList());
 
         QuestionsAmount amount = QuestionsAmount.values()
