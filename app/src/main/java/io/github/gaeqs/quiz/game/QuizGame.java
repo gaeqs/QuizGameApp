@@ -9,9 +9,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.BiConsumer;
+import java.util.stream.Collectors;
 
-import io.github.gaeqs.quiz.activity.ConfigurationActivity;
 import io.github.gaeqs.quiz.R;
+import io.github.gaeqs.quiz.activity.ConfigurationActivity;
 import io.github.gaeqs.quiz.data.Question;
 import io.github.gaeqs.quiz.util.JSONUtils;
 import io.github.gaeqs.quiz.util.Validate;
@@ -35,6 +36,9 @@ public class QuizGame {
         // Difficulty still not being used!
         Difficulty difficulty = Difficulty.values()
                 [preferences.getInt(ConfigurationActivity.PREFERENCES_DIFFICULTY, 1)];
+
+        questions = questions.stream().filter(it -> it.getDifficulty() == difficulty)
+                .collect(Collectors.toList());
 
         QuestionsAmount amount = QuestionsAmount.values()
                 [preferences.getInt(ConfigurationActivity.PREFERENCES_QUESTIONS_AMOUNT, 1)];

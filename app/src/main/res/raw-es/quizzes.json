@@ -5,6 +5,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "KitKat",
@@ -34,6 +35,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "Samsung Galaxy Note 2",
@@ -63,6 +65,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "Espejo",
@@ -92,6 +95,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "Android Market",
@@ -121,6 +125,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "Verdadero",
@@ -140,6 +145,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": true,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": null,
@@ -169,6 +175,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "Nueva York",

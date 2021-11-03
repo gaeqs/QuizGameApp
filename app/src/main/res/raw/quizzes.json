@@ -5,6 +5,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "KitKat",
@@ -31,8 +32,10 @@
   {
     "title": "Which device was the best-selling Android device?",
     "image": null,
+    "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "Samsung Galaxy Note 2",
@@ -62,6 +65,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "Mirror",
@@ -91,6 +95,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "Android Market",
@@ -120,6 +125,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "True",
@@ -139,6 +145,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": true,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": null,
@@ -168,6 +175,7 @@
     "video": null,
     "audio": null,
     "imageQuestion": false,
+    "difficulty": "EASY",
     "answers": [
       {
         "name": "New York",
