@@ -27,5 +27,8 @@
     <string name="create_user_camera">Abrir cámara</string>
     <string name="delete_user_confirm_title">¿Borrar usuario?</string>
     <string name="delete_user_confirm_message">\'%1$s\' desaparecerá… ¡para siempre! (¡Mucho tiempo!)</string>
+    <string name="ranking_best_score">Mejor: %1$d (%2$ds)</string>
+    <string name="ranking_matches">Partidas jugadas: %1$d</string>
+    <string name="ranking_last_played">%1$s</string>
     <string name="guest">Invitado</string>
 </resources>

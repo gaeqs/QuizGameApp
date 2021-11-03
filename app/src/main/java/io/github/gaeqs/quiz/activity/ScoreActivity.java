@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.util.Calendar;
+
 import io.github.gaeqs.quiz.R;
 import io.github.gaeqs.quiz.data.User;
 import io.github.gaeqs.quiz.database.AppDatabase;
@@ -69,7 +73,8 @@ public class ScoreActivity extends AppCompatActivity {
         AppDatabase.databaseWriteExecutor.execute(() -> {
             User user = AppDatabase.INSTANCE.userDao().getUser(username);
             if (user == null) return;
-            if (user.getMaximumScore() > score) return;
+            user.setMatches(user.getMatches() + 1);
+            user.setLastPlayed(Calendar.getInstance().getTimeInMillis());
             if (user.getMaximumScore() < score
                     || user.getMaximumScore() == score && user.getMaximumScoreTime() > timeMillis) {
                 user.setMaximumScore(score);

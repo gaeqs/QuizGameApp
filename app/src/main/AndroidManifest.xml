@@ -16,9 +16,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Quiz">
-        <activity
-            android:name=".activity.RankingActivity"
-            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -56,6 +53,9 @@
             android:exported="false" />
         <activity
             android:name=".activity.DeleteUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RankingActivity"
             android:exported="false" />
     </application>
 

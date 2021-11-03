@@ -26,5 +26,8 @@
     <string name="create_user_camera">Open camera</string>
     <string name="delete_user_confirm_title">Delete user?</string>
     <string name="delete_user_confirm_message">The user \'%1$s\' will be lost forever! (A long time!)</string>
+    <string name="ranking_best_score">Best score: %1$d (%2$ds)</string>
+    <string name="ranking_matches">Games played: %1$d</string>
+    <string name="ranking_last_played">%1$s</string>
     <string name="guest">Guest</string>
 </resources>

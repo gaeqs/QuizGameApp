@@ -31,13 +31,9 @@ import io.github.gaeqs.quiz.activity.ConfigurationActivity;
 import io.github.gaeqs.quiz.database.UserStorage;
 import io.github.gaeqs.quiz.util.Validate;
 
-/**
- * The adapted used by a {@link RecyclerView} to display the {@link Answer} of the current {@link Question}.
- */
 public class UserAdapter extends ArrayAdapter<User> {
 
     private final Spinner spinner;
-    private final LiveData<List<User>> liveData;
     private final Map<User, Bitmap> userImages;
     private final User GUEST = new User(getContext().getString(R.string.guest), "");
 
@@ -49,7 +45,7 @@ public class UserAdapter extends ArrayAdapter<User> {
         this.spinner = spinner;
         Validate.notNull(viewModelOwner, "Owner cannot be null!");
         Validate.notNull(lifecycleOwner, "Owner cannot be null!");
-        liveData = new ViewModelProvider(viewModelOwner).get(UserStorage.class).getUsers();
+        LiveData<List<User>> liveData = new ViewModelProvider(viewModelOwner).get(UserStorage.class).getUsers();
         userImages = new ViewModelProvider(viewModelOwner).get(UserBitmapStorage.class).bitmaps;
         liveData.observe(lifecycleOwner, list -> {
             clear();

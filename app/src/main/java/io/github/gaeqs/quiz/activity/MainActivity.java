@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, ConfigurationActivity.class));
     }
 
+    public void ranking(View view) {
+        startActivity(new Intent(this, RankingActivity.class));
+    }
+
     @Override
     public void onBackPressed() {
         moveTaskToBack(true);
