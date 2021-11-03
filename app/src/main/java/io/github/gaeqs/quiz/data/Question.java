@@ -2,6 +2,7 @@ package io.github.gaeqs.quiz.data;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -13,7 +14,7 @@ public class Question {
     private final String image;
     private final String video;
     private final String audio;
-    private final Set<Difficulty> difficulties;
+    private final Set<Difficulty> difficulty;
     private final List<Answer> answers;
     private final boolean imageQuestion;
 
@@ -23,7 +24,7 @@ public class Question {
         this.image = image;
         this.video = video;
         this.audio = audio;
-        this.difficulties = difficulties;
+        this.difficulty = Collections.unmodifiableSet(new HashSet<>(difficulties));
         this.answers = Collections.unmodifiableList(new ArrayList<>(answers));
         this.imageQuestion = imageQuestion;
     }
@@ -45,7 +46,7 @@ public class Question {
     }
 
     public Set<Difficulty> getDifficulties() {
-        return difficulties;
+        return difficulty;
     }
 
     public List<Answer> getAnswers() {
@@ -63,7 +64,7 @@ public class Question {
                 ", image='" + image + '\'' +
                 ", video='" + video + '\'' +
                 ", audio='" + audio + '\'' +
-                ", difficulties=" + difficulties +
+                ", difficulties=" + difficulty +
                 ", answers=" + answers +
                 ", imageQuestion=" + imageQuestion +
                 '}';

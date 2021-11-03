@@ -20,7 +20,6 @@
             android:id="@+id/configuration_difficulty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:onClick="toggleDifficulty"
             android:text="@string/difficulty"
             android:textColor="@color/white"
@@ -30,7 +29,7 @@
             android:id="@+id/configuration_questions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="16dp"
             android:onClick="toggleQuestionsAmount"
             android:text="@string/questions"
             android:textColor="@color/white"
@@ -40,11 +39,32 @@
             android:id="@+id/configuration_create_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="16dp"
             android:onClick="createUser"
             android:text="@string/create_user"
             android:textColor="@color/white"
             android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/configuration_delete_user2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="editUser"
+            android:text="@string/edit_user"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/configuration_delete_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="deleteUser"
+            android:text="@string/delete_user"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
     </LinearLayout>
 
     <Button

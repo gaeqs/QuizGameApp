@@ -41,6 +41,7 @@ public class VideoDisplayFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
+        videoView.stopPlayback();
         QuizGame.GAME.removeChangeListener(listener);
     }
 
@@ -60,8 +61,10 @@ public class VideoDisplayFragment extends Fragment {
 
         String vidRes = QuizGame.GAME.getCurrentQuestion().getVideo();
         if (vidRes != null) {
-            videoView.setVideoURI(Uri.parse("android.resource://"
-                    + getContext().getPackageName() + "/" + vidRes));
+            int videoId = getResources().getIdentifier(vidRes, "raw", getContext().getPackageName());
+            Uri uri = Uri.parse("android.resource://" + getContext().getPackageName() + "/" + videoId);
+            System.out.println(uri);
+            videoView.setVideoURI(uri);
             videoView.setMediaController(new MediaController(getContext()));
             videoView.requestFocus();
             videoView.start();

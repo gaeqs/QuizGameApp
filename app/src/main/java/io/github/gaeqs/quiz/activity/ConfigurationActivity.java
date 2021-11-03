@@ -52,6 +52,14 @@ public class ConfigurationActivity extends AppCompatActivity {
         startActivity(new Intent(this, CreateUserActivity.class));
     }
 
+    public void editUser(View view) {
+        startActivity(new Intent(this, EditUserActivity.class));
+    }
+
+    public void deleteUser(View view) {
+        startActivity(new Intent(this, DeleteUserActivity.class));
+    }
+
     public void toggleDifficulty(View view) {
         int ordinal = difficulty.ordinal() + 1;
         if (ordinal >= Difficulty.values().length) ordinal = 0;

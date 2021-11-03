@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="general_yes">Sí</string>
+    <string name="general_no">No</string>
     <string name="app_name">Quiz</string>
     <string name="card_image">Card image</string>
     <string name="confirm">Confirmar</string>
@@ -19,7 +21,11 @@
     <string name="difficulty_normal">Normal</string>
     <string name="difficulty_hard">Difícil</string>
     <string name="create_user">Crear usuario</string>
+    <string name="edit_user">Editar usuario</string>
+    <string name="delete_user">Borrar usuario</string>
     <string name="create_user_name">Nombre:</string>
     <string name="create_user_camera">Abrir cámara</string>
+    <string name="delete_user_confirm_title">¿Borrar usuario?</string>
+    <string name="delete_user_confirm_message">\'%1$s\' desaparecerá… ¡para siempre! (¡Mucho tiempo!)</string>
     <string name="guest">Invitado</string>
 </resources>

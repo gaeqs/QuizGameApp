@@ -51,6 +51,12 @@
         <activity
             android:name=".activity.CreateUserActivity"
             android:exported="false" />
+        <activity
+            android:name=".activity.EditUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DeleteUserActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package io.github.gaeqs.quiz.display;
 
 import android.media.AudioAttributes;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -43,6 +44,10 @@ public class AudioDisplayFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
         QuizGame.GAME.removeChangeListener(listener);
     }
 
@@ -75,9 +80,9 @@ public class AudioDisplayFragment extends Fragment {
                             .build()
             );
             try {
-                //mediaPlayer.setDataSource(getContext(), Uri.parse("android.resource://"
-                //        + getContext().getPackageName() + "/" + audRes));
-                mediaPlayer = MediaPlayer.create(getContext(), R.raw.audio_test);
+                int audioId = getResources().getIdentifier(audRes, "raw", getContext().getPackageName());
+                mediaPlayer.setDataSource(getContext(), Uri.parse("android.resource://"
+                        + getContext().getPackageName() + "/" + audioId));
             } catch (Exception e) {
                 e.printStackTrace();
                 mediaPlayer = null;
@@ -86,25 +91,29 @@ public class AudioDisplayFragment extends Fragment {
 
             mediaPlayer.setLooping(true);
 
-            playStopButton.setOnClickListener(view -> {
-                if (mediaPlayer.isPlaying()) {
-                    mediaPlayer.pause();
-                    changeButtonIcon(false);
-                } else {
-                    if (!prepared) {
-                        mediaPlayer.prepareAsync();
-                    } else {
-                        mediaPlayer.start();
-                        changeButtonIcon(true);
-                    }
-                }
-            });
+            playStopButton.setOnClickListener(view -> pauseOrStart());
 
             mediaPlayer.setOnPreparedListener(mp -> {
                 prepared = true;
                 mp.start();
                 changeButtonIcon(true);
             });
+
+            pauseOrStart();
+        }
+    }
+
+    private void pauseOrStart() {
+        if (mediaPlayer.isPlaying()) {
+            mediaPlayer.pause();
+            changeButtonIcon(false);
+        } else {
+            if (!prepared) {
+                mediaPlayer.prepareAsync();
+            } else {
+                mediaPlayer.start();
+                changeButtonIcon(true);
+            }
         }
     }
 
@@ -119,8 +128,8 @@ public class AudioDisplayFragment extends Fragment {
     }
 
     private void changeButtonIcon(boolean playing) {
-            playStopButton.setImageResource(playing
-                    ? android.R.drawable.ic_media_pause
-                    : android.R.drawable.ic_media_play);
-        }
+        playStopButton.setImageResource(playing
+                ? android.R.drawable.ic_media_pause
+                : android.R.drawable.ic_media_play);
+    }
 }

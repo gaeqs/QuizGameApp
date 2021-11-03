@@ -1,4 +1,6 @@
 <resources>
+    <string name="general_yes">Yes</string>
+    <string name="general_no">No</string>
     <string name="app_name">Quiz</string>
     <string name="card_image">Card image</string>
     <string name="confirm">Confirm</string>
@@ -18,7 +20,11 @@
     <string name="difficulty_normal">Normal</string>
     <string name="difficulty_hard">Hard</string>
     <string name="create_user">Create User</string>
+    <string name="edit_user">Edit User</string>
+    <string name="delete_user">Delete User</string>
     <string name="create_user_name">Name:</string>
     <string name="create_user_camera">Open camera</string>
+    <string name="delete_user_confirm_title">Delete user?</string>
+    <string name="delete_user_confirm_message">The user \'%1$s\' will be lost forever! (A long time!)</string>
     <string name="guest">Guest</string>
 </resources>

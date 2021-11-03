@@ -31,7 +31,7 @@ public class UserListComboBox extends Fragment {
         spinner = view.findViewById(R.id.user_combo_box);
 
 
-        adapter = new UserAdapter(spinner, this, this);
+        adapter = new UserAdapter(spinner, this, this, true);
         spinner.setAdapter(adapter);
 
 
@@ -45,7 +45,6 @@ public class UserListComboBox extends Fragment {
 
                 editor.putString(ConfigurationActivity.PREFERENCES_USER,
                         adapter.getSelectedUser());
-                System.out.println("SELECT " + adapter.getSelectedUser());
                 editor.apply();
             }
 
@@ -58,15 +57,5 @@ public class UserListComboBox extends Fragment {
                 editor.apply();
             }
         });
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
     }
 }

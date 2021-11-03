@@ -43,7 +43,8 @@ public class UserAdapter extends ArrayAdapter<User> {
 
     private String selectedUser;
 
-    public UserAdapter(Spinner spinner, ViewModelStoreOwner viewModelOwner, LifecycleOwner lifecycleOwner) {
+    public UserAdapter(Spinner spinner, ViewModelStoreOwner viewModelOwner,
+                       LifecycleOwner lifecycleOwner, boolean addGuest) {
         super(spinner.getContext(), R.layout.user_dropdown_item);
         this.spinner = spinner;
         Validate.notNull(viewModelOwner, "Owner cannot be null!");
@@ -52,7 +53,9 @@ public class UserAdapter extends ArrayAdapter<User> {
         userImages = new ViewModelProvider(viewModelOwner).get(UserBitmapStorage.class).bitmaps;
         liveData.observe(lifecycleOwner, list -> {
             clear();
-            add(GUEST);
+            if (addGuest) {
+                add(GUEST);
+            }
             addAll(list);
             userImages.keySet().removeIf(it -> !list.contains(it));
 
