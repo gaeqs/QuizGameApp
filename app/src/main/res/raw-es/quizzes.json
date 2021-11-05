@@ -8,7 +8,8 @@
     "audio": null,
     "imageQuestion": false,
     "difficulty": [
-      "EASY"
+      "NORMAL",
+      "HARD"
     ],
     "answers": [
       {
@@ -42,7 +43,8 @@
     "audio": null,
     "imageQuestion": false,
     "difficulty": [
-      "EASY"
+      "EASY",
+      "NORMAL"
     ],
     "answers": [
       {
@@ -76,7 +78,8 @@
     "audio": null,
     "imageQuestion": false,
     "difficulty": [
-      "EASY"
+      "NORMAL",
+      "HARD"
     ],
     "answers": [
       {
@@ -110,7 +113,8 @@
     "audio": null,
     "imageQuestion": false,
     "difficulty": [
-      "EASY"
+      "EASY",
+      "NORMAL"
     ],
     "answers": [
       {
@@ -144,7 +148,8 @@
     "audio": null,
     "imageQuestion": false,
     "difficulty": [
-      "EASY"
+      "EASY",
+      "NORMAL"
     ],
     "answers": [
       {
@@ -168,7 +173,8 @@
     "audio": null,
     "imageQuestion": true,
     "difficulty": [
-      "EASY"
+      "NORMAL",
+      "HARD"
     ],
     "answers": [
       {
@@ -202,7 +208,8 @@
     "audio": null,
     "imageQuestion": false,
     "difficulty": [
-      "EASY"
+      "EASY",
+      "NORMAL"
     ],
     "answers": [
       {
@@ -236,6 +243,7 @@
     "audio": null,
     "imageQuestion": false,
     "difficulty": [
+      "NORMAL",
       "HARD"
     ],
     "answers": [
@@ -270,7 +278,8 @@
     "audio": "xiaomi",
     "imageQuestion": false,
     "difficulty": [
-      "NORMAL"
+      "NORMAL",
+      "HARD"
     ],
     "answers": [
       {
@@ -304,6 +313,7 @@
     "audio": "huawei",
     "imageQuestion": false,
     "difficulty": [
+      "EASY",
       "NORMAL"
     ],
     "answers": [
@@ -408,6 +418,7 @@
     "audio": "samsung",
     "imageQuestion": false,
     "difficulty": [
+      "EASY",
       "NORMAL"
     ],
     "answers": [
@@ -477,6 +488,7 @@
     "audio": "oneplus",
     "imageQuestion": false,
     "difficulty": [
+      "EASY",
       "NORMAL"
     ],
     "answers": [
@@ -511,6 +523,7 @@
     "audio": null,
     "imageQuestion": false,
     "difficulty": [
+      "EASY",
       "NORMAL",
       "HARD"
     ],
