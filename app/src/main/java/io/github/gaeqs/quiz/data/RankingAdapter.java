@@ -29,6 +29,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import io.github.gaeqs.quiz.R;
+import io.github.gaeqs.quiz.database.User;
 import io.github.gaeqs.quiz.database.UserStorage;
 import io.github.gaeqs.quiz.util.Validate;
 

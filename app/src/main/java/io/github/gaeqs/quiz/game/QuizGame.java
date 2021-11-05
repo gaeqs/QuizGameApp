@@ -21,26 +21,9 @@ public class QuizGame {
 
     public static QuizGame GAME = null;
 
-    public static void startNewGame(Context context, String username) {
-        List<Question> questions;
-        try {
-            questions = JSONUtils.readQuestionsFromJSON(context, R.raw.quizzes);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
-
+    public static void startNewGame(Context context, String username, List<Question> questions) {
         SharedPreferences preferences =
                 context.getSharedPreferences(ConfigurationActivity.PREFERENCES, 0);
-
-        // Difficulty still not being used!
-        Difficulty difficulty = Difficulty.values()
-                [preferences.getInt(ConfigurationActivity.PREFERENCES_DIFFICULTY, 1)];
-
-        System.out.println(questions);
-        questions = questions.stream().filter(it -> it.getDifficulties().contains(difficulty))
-                .collect(Collectors.toList());
-
         QuestionsAmount amount = QuestionsAmount.values()
                 [preferences.getInt(ConfigurationActivity.PREFERENCES_QUESTIONS_AMOUNT, 1)];
 
@@ -82,6 +65,10 @@ public class QuizGame {
 
         this.initTime = System.currentTimeMillis();
         this.finishTime = 0;
+    }
+
+    public List<Question> getQuestions() {
+        return questions;
     }
 
     public Optional<String> getUsername() {

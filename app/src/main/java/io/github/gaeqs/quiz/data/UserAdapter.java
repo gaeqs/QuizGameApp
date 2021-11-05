@@ -19,7 +19,6 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,6 +27,7 @@ import java.util.Map;
 
 import io.github.gaeqs.quiz.R;
 import io.github.gaeqs.quiz.activity.ConfigurationActivity;
+import io.github.gaeqs.quiz.database.User;
 import io.github.gaeqs.quiz.database.UserStorage;
 import io.github.gaeqs.quiz.util.Validate;
 

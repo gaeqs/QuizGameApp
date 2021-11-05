@@ -9,7 +9,7 @@ import androidx.room.Update;
 
 import java.util.List;
 
-import io.github.gaeqs.quiz.data.User;
+import io.github.gaeqs.quiz.database.User;
 
 @Dao
 public interface UserDao {

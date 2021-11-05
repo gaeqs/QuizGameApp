@@ -31,23 +31,4 @@ public class JSONUtils {
         in.close();
         return new String(buffer, StandardCharsets.UTF_8);
     }
-
-    /**
-     * Reads the questions stored in the resource that matches the given resource id.
-     * @param context the context of the application.
-     * @param id the id of the resource.
-     * @return the list of questions.
-     * @throws IOException when something bad happens while reading the file.
-     */
-    public static List<Question> readQuestionsFromJSON(Context context, int id) throws IOException {
-        String raw = readString(context, id);
-        Gson gson = new Gson();
-
-        Type listType = new TypeToken<List<Question>>() {
-        }.getType();
-
-
-        return gson.fromJson(raw, listType);
-    }
-
 }

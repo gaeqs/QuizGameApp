@@ -2,6 +2,8 @@ package io.github.gaeqs.quiz.data;
 
 import androidx.annotation.NonNull;
 
+import io.github.gaeqs.quiz.database.DatabaseAnswer;
+
 public class Answer {
 
     private final String name;
@@ -24,6 +26,10 @@ public class Answer {
 
     public boolean isCorrect() {
         return correct;
+    }
+
+    public DatabaseAnswer toDatabase(String question) {
+        return new DatabaseAnswer(question, name, image, correct);
     }
 
     @NonNull

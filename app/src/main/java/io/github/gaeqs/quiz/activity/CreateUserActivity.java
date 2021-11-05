@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.Locale;
 
 import io.github.gaeqs.quiz.R;
-import io.github.gaeqs.quiz.data.User;
+import io.github.gaeqs.quiz.database.User;
 import io.github.gaeqs.quiz.database.UserStorage;
 
 public class CreateUserActivity extends AppCompatActivity {

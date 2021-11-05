@@ -1,4 +1,4 @@
-package io.github.gaeqs.quiz.data;
+package io.github.gaeqs.quiz.database;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
@@ -8,7 +8,6 @@ import androidx.room.PrimaryKey;
 
 import java.util.Objects;
 
-import io.github.gaeqs.quiz.database.AppDatabase;
 import io.github.gaeqs.quiz.util.Validate;
 
 @Entity(tableName = "users")
@@ -94,10 +93,6 @@ public class User {
 
     public void setLastPlayed(long lastPlayed) {
         this.lastPlayed = lastPlayed;
-    }
-
-    public void update() {
-        AppDatabase.INSTANCE.userDao().updateUsers(this);
     }
 
     @NonNull

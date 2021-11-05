@@ -9,10 +9,11 @@ import androidx.room.RoomDatabase;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import io.github.gaeqs.quiz.data.User;
+import io.github.gaeqs.quiz.data.access.AnswerDao;
+import io.github.gaeqs.quiz.data.access.QuestionDao;
 import io.github.gaeqs.quiz.data.access.UserDao;
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class, DatabaseAnswer.class, DatabaseQuestion.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static final int NUMBER_OF_THREADS = 4;
@@ -28,4 +29,8 @@ public abstract class AppDatabase extends RoomDatabase {
     }
 
     public abstract UserDao userDao();
+
+    public abstract QuestionDao questionDao();
+
+    public abstract AnswerDao answerDao();
 }

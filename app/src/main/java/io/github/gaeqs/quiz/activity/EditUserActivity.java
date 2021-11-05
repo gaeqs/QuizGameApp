@@ -27,9 +27,9 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 import io.github.gaeqs.quiz.R;
-import io.github.gaeqs.quiz.data.User;
 import io.github.gaeqs.quiz.data.UserAdapter;
 import io.github.gaeqs.quiz.database.AppDatabase;
+import io.github.gaeqs.quiz.database.User;
 
 public class EditUserActivity extends AppCompatActivity {
 
@@ -57,10 +57,10 @@ public class EditUserActivity extends AppCompatActivity {
 
     public void confirm(View view) {
         AppDatabase.databaseWriteExecutor.execute(() -> {
-            User user = AppDatabase.INSTANCE.userDao().getUser(adapter.getSelectedUser());
+            User user = AppDatabase.createInstance(this).userDao().getUser(adapter.getSelectedUser());
             if (user == null) return;
             user.setImagePath(photoFile.getAbsolutePath());
-            AppDatabase.INSTANCE.userDao().updateUsers(user);
+            AppDatabase.createInstance(this).userDao().updateUsers(user);
         });
 
         finish();

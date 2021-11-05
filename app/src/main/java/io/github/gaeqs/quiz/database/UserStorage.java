@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.Future;
 
-import io.github.gaeqs.quiz.data.User;
 import io.github.gaeqs.quiz.util.Validate;
 
 public class UserStorage extends AndroidViewModel {

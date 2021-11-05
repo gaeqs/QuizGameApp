@@ -9,12 +9,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.util.Calendar;
 
 import io.github.gaeqs.quiz.R;
-import io.github.gaeqs.quiz.data.User;
+import io.github.gaeqs.quiz.database.User;
 import io.github.gaeqs.quiz.database.AppDatabase;
 import io.github.gaeqs.quiz.game.QuizGame;
 
@@ -54,7 +52,7 @@ public class ScoreActivity extends AppCompatActivity {
     public void playAgain(View view) {
         SharedPreferences preferences = getSharedPreferences(ConfigurationActivity.PREFERENCES, 0);
         String username = preferences.getString(ConfigurationActivity.PREFERENCES_USER, null);
-        QuizGame.startNewGame(this, username);
+        QuizGame.startNewGame(this, username, QuizGame.GAME.getQuestions());
         startActivity(new Intent(this, GameActivity.class));
     }
 
@@ -71,7 +69,7 @@ public class ScoreActivity extends AppCompatActivity {
         if (username == null) return;
 
         AppDatabase.databaseWriteExecutor.execute(() -> {
-            User user = AppDatabase.INSTANCE.userDao().getUser(username);
+            User user = AppDatabase.createInstance(this).userDao().getUser(username);
             if (user == null) return;
             user.setMatches(user.getMatches() + 1);
             user.setLastPlayed(Calendar.getInstance().getTimeInMillis());
@@ -81,7 +79,7 @@ public class ScoreActivity extends AppCompatActivity {
                 user.setMaximumScoreTime(timeMillis);
 
             }
-            AppDatabase.INSTANCE.userDao().updateUsers(user);
+            AppDatabase.createInstance(this).userDao().updateUsers(user);
         });
     }
 }
