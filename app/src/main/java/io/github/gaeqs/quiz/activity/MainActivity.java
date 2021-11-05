@@ -45,8 +45,11 @@ public class MainActivity extends AppCompatActivity {
                         .getQuestionsFromDatabase(this, difficulty,
                                 Locale.getDefault().getLanguage());
                 QuizGame.startNewGame(this, username, questions);
-                playButton.setEnabled(true);
-                startActivity(new Intent(this, GameActivity.class));
+
+                runOnUiThread(() -> {
+                    playButton.setEnabled(true);
+                    startActivity(new Intent(this, GameActivity.class));
+                });
             } catch (IOException e) {
                 e.printStackTrace();
             }

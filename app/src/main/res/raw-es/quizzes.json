@@ -1,5 +1,7 @@
 [
   {
+    "id": "name_android_5_0_es",
+    "language": "es",
     "title": "¿Cómo se conoce a la versión 5.0 de Android?",
     "image": null,
     "video": null,
@@ -32,6 +34,8 @@
     ]
   },
   {
+    "id": "best_selling_android_device_es",
+    "language": "es",
     "title": "¿Cuál fue el dispositivo Android más vendido de la historia?",
     "image": null,
     "video": null,
@@ -64,6 +68,8 @@
     ]
   },
   {
+    "id": "android_not_implemented_es",
+    "language": "es",
     "title": "¿Cuál de los siguientes productos no ha implementado Android?",
     "image": null,
     "video": null,
@@ -96,6 +102,8 @@
     ]
   },
   {
+    "id": "old_google_play_store_es",
+    "language": "es",
     "title": "¿Cómo se llamaba anteriormente la Google Play Store?",
     "image": null,
     "video": null,
@@ -128,6 +136,8 @@
     ]
   },
   {
+    "id": "first_commercial_android_device_es",
+    "language": "es",
     "title": "El primer móvil Android comercial fue un Samsung:",
     "image": null,
     "video": null,
@@ -150,6 +160,8 @@
     ]
   },
   {
+    "id": "official_android_8_0_logo_es",
+    "language": "es",
     "title": "¿Cuál es el logo de la versión 8.0?",
     "image": null,
     "video": null,
@@ -160,28 +172,30 @@
     ],
     "answers": [
       {
-        "name": null,
+        "name": "honeycomb",
         "image": "honeycomb",
         "correct": false
       },
       {
-        "name": null,
+        "name": "kitkat",
         "image": "kitkat",
         "correct": false
       },
       {
-        "name": null,
+        "name": "marshmallow",
         "image": "marshmallow",
         "correct": false
       },
       {
-        "name": null,
+        "name": "oreo",
         "image": "oreo",
         "correct": true
       }
     ]
   },
   {
+    "id": "google_headquarters_es",
+    "language": "es",
     "title": "¿Dónde se encuentran las oficinas principales de Google?",
     "image": "googlepic",
     "video": null,
@@ -213,8 +227,9 @@
       }
     ]
   },
-
   {
+    "id": "bts_collaboration_es",
+    "language": "es",
     "title": "¿Para qué marca colaboraron BTS en este video?",
     "image": null,
     "video": "bts",
@@ -246,8 +261,9 @@
       }
     ]
   },
-
   {
+    "id": "notification_tune_es",
+    "language": "es",
     "title": "¿Qué móviles usan el siguiente sonido de notificación?",
     "image": null,
     "video": null,
@@ -279,8 +295,9 @@
       }
     ]
   },
-
   {
+    "id": "ringtone_es",
+    "language": "es",
     "title": "¿En qué dispositivos puedes escuchar el siguiente tono de llamada?",
     "image": null,
     "video": null,
@@ -312,8 +329,9 @@
       }
     ]
   },
-
   {
+    "id": "spanish_android_reviewer_channel_es",
+    "language": "es",
     "title": "¿Cómo se llama este conocido analista de móviles?",
     "image": null,
     "video": "pro_android",
@@ -346,8 +364,9 @@
       }
     ]
   },
-
   {
+    "id": "unique_android_device_released_es",
+    "language": "es",
     "title": "¿Cuándo lanzaron este peculiar dispositivo android?",
     "image": null,
     "video": "xperiaplay",
@@ -380,8 +399,9 @@
       }
     ]
   },
-
   {
+    "id": "notification_tune_2_es",
+    "language": "es",
     "title": "¿Qué móviles usan el siguiente sonido de notificación?",
     "image": null,
     "video": null,
@@ -413,8 +433,9 @@
       }
     ]
   },
-
   {
+    "id": "google_io_video_es",
+    "language": "es",
     "title": "¿Dónde se celebra anualmente la importante conferencia mostrada en el video?",
     "image": null,
     "video": "googleio",
@@ -447,8 +468,9 @@
       }
     ]
   },
-
   {
+    "id": "ringtone_2_es",
+    "language": "es",
     "title": "¿En qué dispositivos puedes escuchar el siguiente tono?",
     "image": null,
     "video": null,
@@ -480,8 +502,9 @@
       }
     ]
   },
-
   {
+    "id": "procreate_run_in_android_devices_es",
+    "language": "es",
     "title": "La aplicación vista en el video puede ejecutarse en dispositivos android",
     "image": null,
     "video": "procreate",
@@ -504,7 +527,4 @@
       }
     ]
   }
-
-
-
 ]

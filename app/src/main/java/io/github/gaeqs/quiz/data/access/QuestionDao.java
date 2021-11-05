@@ -14,7 +14,7 @@ import io.github.gaeqs.quiz.database.DatabaseQuestionWithAnswers;
 @Dao
 public interface QuestionDao {
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertQuestions(DatabaseQuestion... questions);
 
     @Transaction

@@ -9,6 +9,6 @@ import io.github.gaeqs.quiz.database.DatabaseAnswer;
 @Dao
 public interface AnswerDao {
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAnswers(DatabaseAnswer... answers);
 }
