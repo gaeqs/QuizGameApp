@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
                 List<Question> questions = QuestionUtils
                         .getQuestionsFromDatabase(this, difficulty,
                                 Locale.getDefault().getLanguage());
+
+                if (questions.isEmpty()) {
+                    // Load english questions!
+                    questions = QuestionUtils.getQuestionsFromDatabase(
+                            this, difficulty, "en");
+                }
+
                 QuizGame.startNewGame(this, username, questions);
 
                 runOnUiThread(() -> {

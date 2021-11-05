@@ -41,14 +41,18 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        QuizGame.GAME.addChangeListener(changeListener);
-        title.setText(QuizGame.GAME.getCurrentQuestion().getTitle());
+        QuizGame game = QuizGame.GAME;
+        game.addChangeListener(changeListener);
+        title.setText(game.getCurrentQuestion().getTitle());
 
-        results.setText("0 / 0");
-        progress.setText("0 / " + QuizGame.GAME.getMaxQuestions());
+        progress.setText(game.getAnsweredQuestions() + " / "
+                + game.getMaxQuestions());
+
+        results.setText(game.getCorrectAnswers() + " / "
+                + game.getWrongAnswers());
 
         initFragment();
-        onGameStatusChange(QuizGame.GAME, QuizGame.GAME.getStatus());
+        onGameStatusChange(game, game.getStatus());
     }
 
     @SuppressLint("SetTextI18n")
