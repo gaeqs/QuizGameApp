@@ -539,5 +539,145 @@
         "correct": true
       }
     ]
+  },
+  {
+    "id": "amongus_sound",
+    "language": "en",
+    "title": "Which game available in android uses this sound?",
+    "image": null,
+    "video": null,
+    "audio": "amongus",
+    "imageQuestion": false,
+    "difficulty": [
+      "EASY",
+      "NORMAL"
+    ],
+    "answers": [
+      {
+        "name": "Fortnite",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Among Us",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Angry Birds",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Subway Surfers",
+        "image": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "most_expensive_phone",
+    "language": "en",
+    "title": "Which is the most expensive android phone of 2021?",
+    "image": null,
+    "video": null,
+    "audio": null,
+    "imageQuestion": false,
+    "difficulty": [
+      "NORMAL",
+      "HARD"
+    ],
+    "answers": [
+      {
+        "name": "Galaxy Fold Z2",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Galaxy S21",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Lenovo Legion",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Huawei Mate Xs",
+        "image": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "id": "android_language",
+    "language": "en",
+    "title": "Which programming language does Google recommends for android development?",
+    "image": null,
+    "video": null,
+    "audio": null,
+    "imageQuestion": false,
+    "difficulty": [
+      "EASY",
+      "NORMAL"
+    ],
+    "answers": [
+      {
+        "name": "Python",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Java",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Kotlin",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Javascript",
+        "image": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "android_launch",
+    "language": "en",
+    "title": "When was the first android phone released?",
+    "image": null,
+    "video": null,
+    "audio": null,
+    "imageQuestion": false,
+    "difficulty": [
+      "NORMAL",
+      "HARD"
+    ],
+    "answers": [
+      {
+        "name": "2007",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "2009",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "2008",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "2010",
+        "image": null,
+        "correct": false
+      }
+    ]
   }
 ]
