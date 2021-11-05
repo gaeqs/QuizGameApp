@@ -343,6 +343,164 @@
         "correct": false
       }
     ]
+  },
+
+  {
+    "title": "When was this unique android device released?",
+    "image": null,
+    "video": "xperiaplay",
+    "audio": null,
+    "imageQuestion": false,
+    "difficulty": [
+      "NORMAL",
+      "HARD"
+    ],
+    "answers": [
+      {
+        "name": "2015",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "2016",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "2013",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "2011",
+        "image": null,
+        "correct": true
+      }
+    ]
+  },
+
+  {
+    "title": "In which devices can you hear the next notification tune?",
+    "image": null,
+    "video": null,
+    "audio": "samsung",
+    "imageQuestion": false,
+    "difficulty": [
+      "NORMAL"
+    ],
+    "answers": [
+      {
+        "name": "HTC",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "LG",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Samsung",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Huawei",
+        "image": null,
+        "correct": false
+      }
+    ]
+  },
+
+  {
+    "title": "Where does the annual conference shown in the video take place?",
+    "image": null,
+    "video": "googleio",
+    "audio": null,
+    "imageQuestion": false,
+    "difficulty": [
+      "NORMAL",
+      "HARD"
+    ],
+    "answers": [
+      {
+        "name": "Monument Valley",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "San Diego",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Mountain Valley",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Los Angeles",
+        "image": null,
+        "correct": false
+      }
+    ]
+  },
+
+  {
+    "title": "In which devices can you hear the next ringtone?",
+    "image": null,
+    "video": null,
+    "audio": "oneplus",
+    "imageQuestion": false,
+    "difficulty": [
+      "NORMAL"
+    ],
+    "answers": [
+      {
+        "name": "LG",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Motorola",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "Oneplus",
+        "image": null,
+        "correct": true
+      },
+      {
+        "name": "Realme",
+        "image": null,
+        "correct": false
+      }
+    ]
+  },
+
+  {
+    "title": "The aplication shown in the video can be run in android devices?",
+    "image": null,
+    "video": "procreate",
+    "audio": null,
+    "imageQuestion": false,
+    "difficulty": [
+      "NORMAL",
+      "HARD"
+    ],
+    "answers": [
+      {
+        "name": "true",
+        "image": null,
+        "correct": false
+      },
+      {
+        "name": "false",
+        "image": null,
+        "correct": true
+      }
+    ]
   }
 
 ]
